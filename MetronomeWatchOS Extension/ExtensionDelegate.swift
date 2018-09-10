@@ -7,15 +7,33 @@
 //
 
 import WatchKit
+import AVFoundation
+import os
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        os_log("Watch metronome")
+        
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch  {
+            
+            os_log("AVAudioSession setActive error %@", error.localizedDescription)
+        }
     }
 
     func applicationDidBecomeActive() {
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch  {
+            
+            os_log("AVAudioSession setActive error %@", error.localizedDescription)
+        }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillResignActive() {

@@ -25,7 +25,7 @@ struct GlobalConstants {
 }
 
 @objc public protocol MetronomeDelegate: class {
-    @objc optional func metronomeTicking(_ metronome: Metronome, bar: Int32, beat: Int32)
+    @objc optional func metronomeTicking(_ metronome: Metronome, currentTick: Int32)
 }
 
 public class Metronome : NSObject {
@@ -63,7 +63,7 @@ public class Metronome : NSObject {
         // Create a standard audio format deinterleaved float.
         self.audioFormat = audioFormat
         super.init()
-        
+        initiazeDefaults()
         // How many audio frames?
         let bipFrames: UInt32 = UInt32(GlobalConstants.kBipDurationSeconds * Float(audioFormat.sampleRate))
         
@@ -97,7 +97,6 @@ public class Metronome : NSObject {
     
     deinit {
         self.stop()
-        
         engine.detach(player)
         soundBuffer[0] = nil
         soundBuffer[1] = nil
@@ -116,7 +115,7 @@ public class Metronome : NSObject {
             // This time is relative to the player's start time.
             
             player.scheduleBuffer(soundBuffer[bufferNumber]!, at: playerBeatTime, options: AVAudioPlayerNodeBufferOptions(rawValue: 0), completionHandler: {
-                self.syncQueue!.sync() {
+                self.syncQueue!.async() {
                     self.beatsScheduled -= 1
                     self.bufferNumber ^= 1
                     self.scheduleBeats()
@@ -148,7 +147,7 @@ public class Metronome : NSObject {
                 
                 DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: dispatchTime) {
                     if (self.isPlaying && self.meter == callBackMeter) {
-                        self.delegate!.metronomeTicking!(self, bar: (callbackBeat / 4) + 1, beat: (callbackBeat % 4) + 1)
+                        self.delegate!.metronomeTicking!(self, currentTick: callbackBeat)
                     }
                 }
             }
@@ -164,11 +163,10 @@ public class Metronome : NSObject {
             
             isPlaying = true
             nextBeatSampleTime = 0
-            
             beatNumber = 0
             bufferNumber = 0
             
-            self.syncQueue!.sync() {
+            self.syncQueue!.async() {
                 self.scheduleBeats()
             }
             
@@ -202,8 +200,7 @@ public class Metronome : NSObject {
         
         playerStarted = false
     }
-    
-    public func reset() {
+    func initiazeDefaults() {
         tempoBPM = GlobalConstants.kTempoDefault;
         meter = GlobalConstants.kMeterDefault;
         timeInterval = 0
@@ -211,7 +208,10 @@ public class Metronome : NSObject {
         beatNumber = 0
         division = GlobalConstants.kDivisions[divisionIndex]
         beatsScheduled = 0;
-        
+    }
+    public func reset() {
+
+        initiazeDefaults()
         updateTimeInterval()
         
         isPlaying = false

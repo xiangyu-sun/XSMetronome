@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Metronome.xcodeproj">
+      location = "group:Metronome.playground">
+   </FileRef>
+   <FileRef
+      location = "container:Metronome.xcodeproj">
    </FileRef>
 </Workspace>

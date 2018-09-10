@@ -1,14 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MetronomeWatchOS" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="hMH-62-kND">
+                            <items>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" id="OCe-2O-raM">
+                                    <items>
+                                        <group width="1" height="0.40000000000000002" alignment="center" verticalAlignment="center" layout="vertical" id="Dxh-dx-DWo">
+                                            <items>
+                                                <label width="1" height="0.59999999999999998" alignment="center" verticalAlignment="center" text="4 / 4" textAlignment="center" id="WcL-gT-dEE" userLabel="Meter">
+                                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                                </label>
+                                                <label width="1" height="0.29999999999999999" alignment="left" verticalAlignment="center" text="120 BPM" textAlignment="center" id="txt-5g-RAO" userLabel="Tempo"/>
+                                            </items>
+                                        </group>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="jfj-IP-gm7" userLabel="Tap Gesture">
+                                            <connections>
+                                                <action selector="tapRecongnized:" destination="AgC-eL-Hgc" id="GC1-np-K4m"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                        <swipeGestureRecognizer id="9ps-cS-8Zf" userLabel="Right Swipe Gesture">
+                                            <connections>
+                                                <action selector="rightSwipeRecongnized:" destination="AgC-eL-Hgc" id="lI0-uE-juZ"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                        <swipeGestureRecognizer direction="2" id="5ze-Cg-kfU" userLabel="Left Swipe Gesture">
+                                            <connections>
+                                                <action selector="leftSwipeRecongnized:" destination="AgC-eL-Hgc" id="t2d-Az-K8A"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                        <swipeGestureRecognizer direction="4" id="93V-xd-cha" userLabel="Up Swipe Gesture">
+                                            <connections>
+                                                <action selector="upSwipeRecongnized:" destination="AgC-eL-Hgc" id="F2P-bM-S7O"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                        <swipeGestureRecognizer direction="8" id="kng-AM-I4b" userLabel="Down Swipe Gesture">
+                                            <connections>
+                                                <action selector="downSwipeRecongnized:" destination="AgC-eL-Hgc" id="091-7h-G76"/>
+                                            </connections>
+                                        </swipeGestureRecognizer>
+                                    </gestureRecognizers>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundArcsGroup" destination="hMH-62-kND" id="IyA-Yc-NQj"/>
+                        <outlet property="foregroundArcsGroup" destination="OCe-2O-raM" id="ymB-RE-xwl"/>
+                        <outlet property="meterLabel" destination="WcL-gT-dEE" id="skS-zj-s0i"/>
+                        <outlet property="tempoLabel" destination="txt-5g-RAO" id="kd8-ES-yrj"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>

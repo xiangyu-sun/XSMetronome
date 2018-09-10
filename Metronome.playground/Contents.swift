@@ -2,6 +2,7 @@
   
 import UIKit
 import PlaygroundSupport
+import MetronomeKit_iOS
 
 class MyViewController : UIViewController {
     override func loadView() {
@@ -17,5 +18,8 @@ class MyViewController : UIViewController {
         self.view = view
     }
 }
+
+
+
 // Present the view controller in the Live View window
 PlaygroundPage.current.liveView = MyViewController()

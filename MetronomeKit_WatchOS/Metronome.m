@@ -7,7 +7,7 @@
 */
 
 #import "Metronome.h"
-#import "watchOSMetronome_Extension-Swift.h"
+#import "MetronomeKit_WatchOS-Swift.h"
 
 static const float      kTempoDefault   = 120;
 static const float      kTempoMin       = 40;
@@ -68,7 +68,7 @@ static const float      kTempoChangeResponsivenessSeconds = 0.250f;
         _downbeatBuffer.frameLength = bipFrames;
         _upbeatBuffer.frameLength = bipFrames;
         
-        // Generate Metronome Bips
+        // Generate Metronome Bip
         TriangleWaveGenerator *twg1 = [[TriangleWaveGenerator alloc] initWithSampleRate:_audioFormat.sampleRate frequency:660.0];
         TriangleWaveGenerator *twg2 = [[TriangleWaveGenerator alloc] initWithSampleRate:_audioFormat.sampleRate];
         [twg1 render:_downbeatBuffer];
