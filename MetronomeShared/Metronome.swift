@@ -8,65 +8,81 @@
 
 import Foundation
 import AVFoundation
+import os
+
+
+
 
 struct GlobalConstants {
-    static let kBipDurationSeconds: Float32 = 0.020
-    static let kTempoChangeResponsivenessSeconds: Float32 = 0.250
-    static let kTempoDefault: Float32 = 120;
-    static let kTempoMin: Float32 = 40;
-    static let kTempoMax: Float32 = 208;
-    
-    static let kMeterDefault: Int32 = 4;
-    static let kMeterMin: Int32 = 2;
-    static let kMeterMax: Int32 = 8;
-    
-    static let kNumDivisions = 4;
-    static let kDivisions = [ 2, 4, 8, 16 ];
+    static let kBipDurationSeconds = 0.02
+    static let kTempoChangeResponsivenessSeconds = 0.25
+
+    static let kDivisions = [2, 4, 8, 16]
 }
 
 @objc public protocol MetronomeDelegate: class {
-    @objc optional func metronomeTicking(_ metronome: Metronome, currentTick: Int32)
+    @objc func metronomeTicking(_ metronome: Metronome, currentTick: Int)
 }
 
 public class Metronome : NSObject {
-    var engine: AVAudioEngine = AVAudioEngine()
-    var player: AVAudioPlayerNode = AVAudioPlayerNode()    // owned by engine
-    var audioFormat: AVAudioFormat
-    var soundBuffer = [AVAudioPCMBuffer?]()
     
-    public var meter: Int32 = 0
-    public var division: Int = 0
+    struct MeterConfig{
+        static let min = 2
+        static let `default` = 4
+        static let max = 8
+    }
     
-    var timeInterval: Float32 = 0
-    var divisionIndex: Int = 0
+    struct TempoConfig{
+        static let min = 40
+        static let `default` = 80
+        static let max = 208
+    }
     
-    var bufferNumber: Int = 0
-    var bufferSampleRate: Float64 = 0.0
+    public private(set) var meter = 0
+    public private(set) var division = 0
     
-    var syncQueue: DispatchQueue? = nil
+    public private(set) var tempoBPM = 0
+    public private(set) var beatNumber  = 0
     
-    public var tempoBPM: Float32 = 0
-    public var beatNumber: Int32 = 0
-    var nextBeatSampleTime: Float64 = 0.0
-    var beatsToScheduleAhead: Int32 = 0     // controls responsiveness to tempo changes
-    var beatsScheduled: Int32 = 0
-    
-    public var isPlaying: Bool = false
-    var playerStarted: Bool = false
+    public private(set) var isPlaying = false
     
     public weak var delegate: MetronomeDelegate?
     
+    
+    let engine: AVAudioEngine = AVAudioEngine()
+    /// owned by engine
+    let player: AVAudioPlayerNode = AVAudioPlayerNode()
+    
+    var audioFormat: AVAudioFormat
+    var soundBuffer = [AVAudioPCMBuffer?]()
+    
+    var timeInterval: TimeInterval = 0
+    var divisionIndex = 0
+    
+    var bufferNumber = 0
+    var bufferSampleRate = 0.0
+    
+    var syncQueue = DispatchQueue(label: "Metronome")
+
+    var nextBeatSampleTime = 0.0
+    /// controls responsiveness to tempo changes
+    var beatsToScheduleAhead  = 0
+    var beatsScheduled = 0
+
+    var playerStarted = false
+
+    
     public init(audioFormat:AVAudioFormat) {
         
-        // Use two triangle waves which are generate for the metronome bips.
-        
-        // Create a standard audio format deinterleaved float.
         self.audioFormat = audioFormat
         super.init()
-        initiazeDefaults()
-        // How many audio frames?
-        let bipFrames: UInt32 = UInt32(GlobalConstants.kBipDurationSeconds * Float(audioFormat.sampleRate))
         
+        initiazeDefaults()
+        
+        // How many audio frames?
+        let bipFrames = UInt32(GlobalConstants.kBipDurationSeconds * audioFormat.sampleRate)
+        
+        // Use two triangle waves which are generate for the metronome bips.
         // Create the PCM buffers.
         soundBuffer.append(AVAudioPCMBuffer(pcmFormat: audioFormat, frameCapacity: bipFrames))
         soundBuffer.append(AVAudioPCMBuffer(pcmFormat: audioFormat, frameCapacity: bipFrames))
@@ -82,16 +98,10 @@ public class Metronome : NSObject {
         wg1.render(soundBuffer[0]!)
         wg2.render(soundBuffer[1]!)
         
-        // Connect player -> output, with the format of the buffers we're playing.
-        let output: AVAudioOutputNode = engine.outputNode
-        
         engine.attach(player)
-        engine.connect(player, to: output, fromBus: 0, toBus: 0, format: audioFormat)
+        engine.connect(player, to:  engine.outputNode, fromBus: 0, toBus: 0, format: audioFormat)
         
         bufferSampleRate = audioFormat.sampleRate
-        
-        // Create a serial dispatch queue for synchronizing callbacks.
-        syncQueue = DispatchQueue(label: "Metronome")
         
     }
     
@@ -102,83 +112,35 @@ public class Metronome : NSObject {
         soundBuffer[1] = nil
     }
     
-    func scheduleBeats() {
-        if (!isPlaying) { return }
+    public func start() throws {
+        // Start the engine without playing anything yet.
         
-        while (beatsScheduled < beatsToScheduleAhead) {
-            // Schedule the beat.
-            
-            let samplesPerBeat = Float(timeInterval * Float(bufferSampleRate))
-            
-            let beatSampleTime: AVAudioFramePosition = AVAudioFramePosition(nextBeatSampleTime)
-            let playerBeatTime: AVAudioTime = AVAudioTime(sampleTime: AVAudioFramePosition(beatSampleTime), atRate: bufferSampleRate)
-            // This time is relative to the player's start time.
-            
-            player.scheduleBuffer(soundBuffer[bufferNumber]!, at: playerBeatTime, options: AVAudioPlayerNodeBufferOptions(rawValue: 0), completionHandler: {
-                self.syncQueue!.async() {
-                    self.beatsScheduled -= 1
-                    self.bufferNumber ^= 1
-                    self.scheduleBeats()
-                }
-            })
-            
-            beatsScheduled += 1
-            
-            if (!playerStarted) {
-                // We defer the starting of the player so that the first beat will play precisely
-                // at player time 0. Having scheduled the first beat, we need the player to be running
-                // in order for nodeTimeForPlayerTime to return a non-nil value.
-                player.play()
-                playerStarted = true
-            }
-            
-            // Schedule the delegate callback (metronomeTicking:bar:beat:) if necessary.
-            let callbackBeat = beatNumber
-            
-            let callBackMeter = meter
-            
-            if delegate?.metronomeTicking != nil {
-                let nodeBeatTime: AVAudioTime = player.nodeTime(forPlayerTime: playerBeatTime)!
-                let output: AVAudioIONode = engine.outputNode
-                
-                //print(" \(playerBeatTime), \(nodeBeatTime), \(output.presentationLatency)")
-                let latencyHostTicks: UInt64 = AVAudioTime.hostTime(forSeconds: output.presentationLatency)
-                let dispatchTime = DispatchTime(uptimeNanoseconds: nodeBeatTime.hostTime + latencyHostTicks)
-                
-                DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: dispatchTime) {
-                    if (self.isPlaying && self.meter == callBackMeter) {
-                        self.delegate!.metronomeTicking!(self, currentTick: callbackBeat)
-                    }
-                }
-            }
-            beatNumber = (beatNumber + 1) % meter
-            nextBeatSampleTime += Float64(samplesPerBeat)
+        try engine.start()
+        
+        isPlaying = true
+        nextBeatSampleTime = 0
+        
+        beatNumber = 0
+        bufferNumber = 0
+        
+        self.syncQueue.async() {
+            self.scheduleBeats()
         }
     }
     
-    @discardableResult public func start() -> Bool {
-        // Start the engine without playing anything yet.
-        do {
-            try engine.start()
-            
-            isPlaying = true
-            nextBeatSampleTime = 0
-            beatNumber = 0
-            bufferNumber = 0
-            
-            self.syncQueue!.async() {
-                self.scheduleBeats()
-            }
-            
-            return true
-        } catch {
-            print("\(error)")
-            return false
-        }
+    func initiazeDefaults() {
+        tempoBPM = TempoConfig.default
+        meter = MeterConfig.default
+        timeInterval = 0
+        divisionIndex = 1
+        beatNumber = 0
+        division = GlobalConstants.kDivisions[divisionIndex]
+        beatsScheduled = 0;
     }
+
     
     public func stop() {
-        isPlaying = false;
+        isPlaying = false
         
         /* Note that pausing or stopping all AVAudioPlayerNode's connected to an engine does
          NOT pause or stop the engine or the underlying hardware.
@@ -200,61 +162,26 @@ public class Metronome : NSObject {
         
         playerStarted = false
     }
-    func initiazeDefaults() {
-        tempoBPM = GlobalConstants.kTempoDefault;
-        meter = GlobalConstants.kMeterDefault;
-        timeInterval = 0
-        divisionIndex = 1
-        beatNumber = 0
-        division = GlobalConstants.kDivisions[divisionIndex]
-        beatsScheduled = 0;
-    }
-    public func reset() {
-
-        initiazeDefaults()
-        updateTimeInterval()
-        
-        isPlaying = false
-        playerStarted = false
-    }
     
-    func updateTimeInterval() {
-        
-        timeInterval = (60.0 / tempoBPM) * (4.0 / Float(GlobalConstants.kDivisions[divisionIndex]))
-        
-        beatsToScheduleAhead = Int32(Int(GlobalConstants.kTempoChangeResponsivenessSeconds / timeInterval))
-        
-        if (beatsToScheduleAhead < 1) {
-            beatsToScheduleAhead = 1
-        }
-    }
-    
-    public func incrementTempo(by increment: Float32) {
+    public func incrementTempo(by increment: Int) {
         
         tempoBPM += increment;
         
-        if (tempoBPM > GlobalConstants.kTempoMax) {
-            tempoBPM = GlobalConstants.kTempoMax
-        } else if (tempoBPM < GlobalConstants.kTempoMin) {
-            tempoBPM = GlobalConstants.kTempoMin
-        }
+        tempoBPM = min(max(tempoBPM, TempoConfig.min), TempoConfig.max)
         
         updateTimeInterval()
     }
     
-    public func incrementMeter(by increment: Int32) {
+    public func incrementMeter(by increment: Int) {
         meter += increment;
         
-        if (meter < GlobalConstants.kMeterMin) {
-            meter = GlobalConstants.kMeterMin
-        } else if (meter > GlobalConstants.kMeterMax) {
-            meter = GlobalConstants.kMeterMax;
-        }
+        meter = min(max(meter, MeterConfig.min), MeterConfig.max)
         
-        beatNumber = 0;
+        beatNumber = 0
     }
     
-    public func incrementDivisionIndex(by increment: Int) {
+    public func incrementDivisionIndex(by increment: Int) throws {
+        
         let wasRunning = isPlaying
         
         if (wasRunning) {
@@ -263,18 +190,91 @@ public class Metronome : NSObject {
         
         divisionIndex += increment
         
-        if (divisionIndex < 0) {
-            divisionIndex = 0
-        } else if (divisionIndex > GlobalConstants.kNumDivisions-1) {
-            divisionIndex = GlobalConstants.kNumDivisions-1
-        }
+        divisionIndex = min(max(divisionIndex, 0), GlobalConstants.kDivisions.count - 1)
         
         division = GlobalConstants.kDivisions[divisionIndex];
+        
         updateTimeInterval()
         
         if (wasRunning) {
-            start()
+            try start()
         }
     }
+    
+    public func reset() {
+        
+        initiazeDefaults()
+        updateTimeInterval()
+        
+        isPlaying = false
+        playerStarted = false
+    }
+    
+    
+    
+    func scheduleBeats() {
+        if (!isPlaying) { return }
+        
+        while (beatsScheduled < beatsToScheduleAhead) {
+            // Schedule the beat.
+            
+            
+            let beatSampleTime: AVAudioFramePosition = AVAudioFramePosition(nextBeatSampleTime)
+            let playerBeatTime: AVAudioTime = AVAudioTime(sampleTime: AVAudioFramePosition(beatSampleTime), atRate: bufferSampleRate)
+            // This time is relative to the player's start time.
+            
+            player.scheduleBuffer(soundBuffer[bufferNumber]!, at: playerBeatTime, options: AVAudioPlayerNodeBufferOptions(rawValue: 0), completionHandler: {
+                self.syncQueue.async() {
+                    self.beatsScheduled -= 1
+                    self.bufferNumber ^= 1
+                    self.scheduleBeats()
+                }
+            })
+            
+            beatsScheduled += 1
+            
+            if (!playerStarted) {
+                // We defer the starting of the player so that the first beat will play precisely
+                // at player time 0. Having scheduled the first beat, we need the player to be running
+                // in order for nodeTimeForPlayerTime to return a non-nil value.
+                player.play()
+                playerStarted = true
+            }
+            
+            // Schedule the delegate callback (metronomeTicking:bar:beat:) if necessary.
+            
+            let callBackMeter = meter
+            if let delegate = self.delegate , self.isPlaying && self.meter == callBackMeter {
+                let callbackBeat = beatNumber
+                
+                let nodeBeatTime: AVAudioTime = player.nodeTime(forPlayerTime: playerBeatTime)!
+                let output: AVAudioIONode = engine.outputNode
+                
+                print(" \(playerBeatTime), \(nodeBeatTime), \(output.presentationLatency)")
+                
+                let latencyHostTicks: UInt64 = AVAudioTime.hostTime(forSeconds: output.presentationLatency)
+                let dispatchTime = DispatchTime(uptimeNanoseconds: nodeBeatTime.hostTime + latencyHostTicks)
+                DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: dispatchTime) {
+                    delegate.metronomeTicking(self, currentTick: callbackBeat)
+                }
+            }
+            beatNumber = (beatNumber + 1) % meter
+            
+            let samplesPerBeat = timeInterval * bufferSampleRate
+            nextBeatSampleTime += samplesPerBeat
+        }
+    }
+    
+
+    func updateTimeInterval() {
+        
+        timeInterval = (60.0 / Double(tempoBPM)) * (4.0 / Double(GlobalConstants.kDivisions[divisionIndex]))
+        
+        beatsToScheduleAhead = Int(GlobalConstants.kTempoChangeResponsivenessSeconds / timeInterval)
+        
+        beatsToScheduleAhead = max(beatsToScheduleAhead, 1)
+    }
+    
+ 
     
 }

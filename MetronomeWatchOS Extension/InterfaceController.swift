@@ -37,8 +37,7 @@ class InterfaceController: WKInterfaceController {
         metronome.delegate = self
         drawArchs()
         crownSequencer.delegate = self
-        crownSequencer.focus()
-        
+    
         NotificationCenter.default.addObserver(self, selector: #selector(handleMediaServicesWereReset), name: NSNotification.Name.AVAudioSessionMediaServicesWereReset, object: AVAudioSession.sharedInstance())
     }
     
@@ -51,8 +50,8 @@ class InterfaceController: WKInterfaceController {
         let backgroundFillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor
         
         
-        let contentFrameWidth = self.contentFrame.size.width;
-        let contentFrameHeight = self.contentFrame.size.height;
+        let contentFrameWidth = self.contentFrame.size.width
+        let contentFrameHeight = self.contentFrame.size.height
         
         let center = CGPoint(x: contentFrameWidth / 2.0, y: contentFrameHeight / 2.0)
         let radius = min(contentFrameWidth / 2.0, contentFrameHeight / 2.0) - (kArcWidth / 2.0)
@@ -152,6 +151,7 @@ class InterfaceController: WKInterfaceController {
         super.willActivate()
         updateMeterLabel()
         updateTempoLabel()
+        crownSequencer.focus()
     }
     
     override func didDeactivate() {
@@ -176,11 +176,11 @@ class InterfaceController: WKInterfaceController {
         tempoLabel.setText("\(metronome.tempoBPM) BPM")
     }
     @IBAction func downSwipeRecongnized(_ sender: Any) {
-        metronome.incrementDivisionIndex(by: -1)
+        try? metronome.incrementDivisionIndex(by: -1)
         updateMeterLabel()
     }
     @IBAction func upSwipeRecongnized(_ sender: Any) {
-        metronome.incrementDivisionIndex(by: 1)
+        try? metronome.incrementDivisionIndex(by: 1)
         updateMeterLabel()
     }
     @IBAction func leftSwipeRecongnized(_ sender: Any) {
@@ -194,7 +194,7 @@ class InterfaceController: WKInterfaceController {
         updateMeterLabel()
         
         if wasRunning {
-            metronome.start()
+            try? metronome.start()
         }
     }
     @IBAction func rightSwipeRecongnized(_ sender: Any) {
@@ -208,7 +208,7 @@ class InterfaceController: WKInterfaceController {
         updateMeterLabel()
         
         if wasRunning {
-            metronome.start()
+            try? metronome.start()
         }
     }
     @IBAction func tapRecongnized(_ sender: Any) {
@@ -217,7 +217,7 @@ class InterfaceController: WKInterfaceController {
             updateArcWithTick(currentTick: 0)
             wasRunning = true
         }else {
-            metronome.start()
+            try? metronome.start()
         }
     }
     
@@ -227,8 +227,8 @@ class InterfaceController: WKInterfaceController {
 
 
 extension InterfaceController: MetronomeDelegate {
-    func metronomeTicking(_ metronome: Metronome, currentTick: Int32) {
-        updateArcWithTick(currentTick: Int(currentTick))
+    func metronomeTicking(_ metronome: Metronome, currentTick: Int) {
+        updateArcWithTick(currentTick: currentTick)
     }
 }
 
@@ -250,14 +250,14 @@ extension InterfaceController: WKCrownDelegate {
             accumulatedRotations = 0;
         }
         if  value != 0 {
-            metronome.incrementTempo(by: Float32(value))
+            metronome.incrementTempo(by: value)
             updateTempoLabel()
         }
     }
     
     func crownDidBecomeIdle(_ crownSequencer: WKCrownSequencer?) {
         if wasRunning {
-            metronome.start()
+            try? metronome.start()
             wasRunning = false
         }
     }
