@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991C88E721500417005537D4 /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
+		991C88E821500418005537D4 /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
+		991C88EA21500A98005537D4 /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
+		991C88EB21500A98005537D4 /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
 		997638B12145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
 		997638B22145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
 		997638B32145807100952DA7 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
@@ -147,6 +151,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		991C88E521500410005537D4 /* MetronomeFacePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeFacePainter.swift; sourceTree = "<group>"; };
+		991C88E921500A98005537D4 /* FacePaintConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePaintConfiguration.swift; sourceTree = "<group>"; };
 		997638B02145728D00952DA7 /* TWGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWGenerator.swift; sourceTree = "<group>"; };
 		99FBD2202143BA26006F9C20 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2232143BA26006F9C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -319,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				99FBD2FD2143CA33006F9C20 /* Metronome.swift */,
+				991C88E521500410005537D4 /* MetronomeFacePainter.swift */,
+				991C88E921500A98005537D4 /* FacePaintConfiguration.swift */,
 				997638B02145728D00952DA7 /* TWGenerator.swift */,
 			);
 			path = MetronomeShared;
@@ -711,6 +719,8 @@
 			files = (
 				997638B32145807100952DA7 /* Metronome.swift in Sources */,
 				997638B12145728D00952DA7 /* TWGenerator.swift in Sources */,
+				991C88EA21500A98005537D4 /* FacePaintConfiguration.swift in Sources */,
+				991C88E721500417005537D4 /* MetronomeFacePainter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +748,8 @@
 			files = (
 				997638B22145728D00952DA7 /* TWGenerator.swift in Sources */,
 				99FBD2FE2143CA33006F9C20 /* Metronome.swift in Sources */,
+				991C88EB21500A98005537D4 /* FacePaintConfiguration.swift in Sources */,
+				991C88E821500418005537D4 /* MetronomeFacePainter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

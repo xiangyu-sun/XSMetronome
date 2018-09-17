@@ -12,8 +12,6 @@ import MetronomeKit_WatchOS
 import AVFoundation
 import os
 
-let kArcWidth: CGFloat = 8.0                     // points
-let kArcGapAngle = (16.0 * Double.pi) / 180.0     // radians
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var backgroundArcsGroup: WKInterfaceGroup!
@@ -22,8 +20,8 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var meterLabel: WKInterfaceLabel!
     
     var metronome: Metronome!
-    
-    var foregroundArcArray = [UIImage]()
+    var faceDrawer: MetronomeFacePainter!
+   
     var accumulatedRotations: Double = 0
     var wasRunning = false
     
@@ -33,110 +31,35 @@ class InterfaceController: WKInterfaceController {
         guard let format = AVAudioFormat(standardFormatWithSampleRate: AVAudioSession.sharedInstance().sampleRate, channels: 1) else {
             return 
         }
+        
+        let foregroundFillColor = UIColor(red: 0.301, green: 0.556, blue: 0.827, alpha: 1.0).cgColor
+        let firstElementFillColor  = UIColor(red: 0.301, green: 0.729, blue: 0.478, alpha: 1.0).cgColor
+        let backgroundFillColor  = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor
+        
+        let faceConfig = FacePaintConfiguration(scale: WKInterfaceDevice.current().screenScale, contentFrame: self.contentFrame, foregroundFillColor: foregroundFillColor, firstElementFillColor: firstElementFillColor, backgroundFillColor: backgroundFillColor)
+        
+        faceDrawer  = MetronomeFacePainter(faceConfiguration: faceConfig)
         metronome = Metronome(audioFormat: format)
         metronome.delegate = self
-        drawArchs()
+        faceDrawer.drawArchsWith(meter: metronome.meter) { (image) in
+            backgroundArcsGroup.setBackgroundImage(image)
+        }
+      
         crownSequencer.delegate = self
     
         NotificationCenter.default.addObserver(self, selector: #selector(handleMediaServicesWereReset), name: NSNotification.Name.AVAudioSessionMediaServicesWereReset, object: AVAudioSession.sharedInstance())
     }
     
-    func drawArchs()  {
-        let meter = metronome.meter
-        
-        let scale = WKInterfaceDevice.current().screenScale
-        let foregroundFillColor = UIColor(red: 0.301, green: 0.556, blue: 0.827, alpha: 1.0).cgColor
-        let firstElementFillColor = UIColor(red: 0.301, green: 0.729, blue: 0.478, alpha: 1.0).cgColor
-        let backgroundFillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor
-        
-        
-        let contentFrameWidth = self.contentFrame.size.width
-        let contentFrameHeight = self.contentFrame.size.height
-        
-        let center = CGPoint(x: contentFrameWidth / 2.0, y: contentFrameHeight / 2.0)
-        let radius = min(contentFrameWidth / 2.0, contentFrameHeight / 2.0) - (kArcWidth / 2.0)
-        
-        let stepAngle = ((2.0 * .pi) / Double(meter)) - kArcGapAngle;
-        
-        // Draw Background Rings
-        var startAngle = (kArcGapAngle / 2.0) - (1.5 * .pi/2);
-        UIGraphicsBeginImageContextWithOptions(self.contentFrame.size, false, scale);
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return
-        }
-        context.beginPath()
-        for _ in (0..<meter) {
-            let strokedArc = newDonutArcWithCenter(centerPoint: center, withRadius: radius, fromStartAngle: CGFloat(startAngle), toEndAngle: CGFloat(startAngle + stepAngle))
 
-            context.addPath(strokedArc);
-            startAngle += stepAngle + kArcGapAngle;
-        }
-        
- 
-        context.closePath()
-        context.setFillColor(backgroundFillColor)
-        context.fillPath()
-        
-        guard let cgBackgroundImage = context.makeImage() else {
-            return
-        }
-        let backgroundImage = UIImage(cgImage: cgBackgroundImage)
-        backgroundArcsGroup.setBackgroundImage(backgroundImage)
-        
-        UIGraphicsEndImageContext();
-        
-        // Draw and Store Foreground Rings
-        foregroundArcArray.removeAll()
-
-        startAngle = (kArcGapAngle / 2.0) - (1.5 * .pi/2)
-        
-        
-        for index in (0..<meter) {
-            UIGraphicsBeginImageContextWithOptions(self.contentFrame.size, false, scale)
-            
-            guard let context = UIGraphicsGetCurrentContext() else {
-                continue
-            }
-            context.beginPath()
-            let strokedArc = newDonutArcWithCenter(centerPoint: center, withRadius: radius, fromStartAngle: CGFloat(startAngle), toEndAngle: CGFloat(startAngle + stepAngle))
-            
-            context.addPath(strokedArc)
-            
-            context.closePath()
-            
-            if (index == 0) {
-                context.setFillColor(firstElementFillColor)
-            } else {
-                context.setFillColor(foregroundFillColor)
-            }
-            context.fillPath();
-            
-            guard let cgImage = context.makeImage() else {
-                continue
-            }
-            let foregroundImage = UIImage(cgImage: cgImage)
-            foregroundArcArray.append(foregroundImage)
-            
-            UIGraphicsEndImageContext()
-            
-            startAngle += stepAngle + kArcGapAngle
-        }
-    }
-    
-    func newDonutArcWithCenter(centerPoint: CGPoint, withRadius radius: CGFloat, fromStartAngle startAngle: CGFloat, toEndAngle endAngle: CGFloat) -> CGPath {
-        let arc = CGMutablePath()
-        arc.addArc(center: centerPoint, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false, transform: CGAffineTransform.identity)
-
-        return arc.copy(strokingWithWidth: kArcWidth, lineCap: .square, lineJoin: .miter, miterLimit: 10)
-    }
-    
     @objc func handleMediaServicesWereReset()  {
         os_log("audio reset")
         metronome.delegate = nil
         metronome.reset()
         
         updateMeterLabel()
-        drawArchs()
+        faceDrawer.drawArchsWith(meter: metronome.meter) { (image) in
+            backgroundArcsGroup.setBackgroundImage(image)
+        }
         
         metronome.delegate = self
         
@@ -162,7 +85,7 @@ class InterfaceController: WKInterfaceController {
     
     func updateArcWithTick(currentTick: Int) {
         if metronome.isPlaying {
-            foregroundArcsGroup.setBackgroundImage(foregroundArcArray[currentTick])
+            foregroundArcsGroup.setBackgroundImage(faceDrawer.foregroundArcArray[currentTick])
         } else {
             foregroundArcsGroup.setBackgroundImage(nil)
         }
@@ -190,7 +113,9 @@ class InterfaceController: WKInterfaceController {
             metronome.stop()
         }
         metronome.incrementMeter(by: 1)
-        drawArchs()
+        faceDrawer.drawArchsWith(meter: metronome.meter) { (image) in
+            backgroundArcsGroup.setBackgroundImage(image)
+        }
         updateMeterLabel()
         
         if wasRunning {
@@ -204,7 +129,9 @@ class InterfaceController: WKInterfaceController {
             metronome.stop()
         }
         metronome.incrementMeter(by: -1)
-        drawArchs()
+        faceDrawer.drawArchsWith(meter: metronome.meter) { (image) in
+            backgroundArcsGroup.setBackgroundImage(image)
+        }
         updateMeterLabel()
         
         if wasRunning {

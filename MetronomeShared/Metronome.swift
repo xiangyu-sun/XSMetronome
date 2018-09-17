@@ -11,12 +11,9 @@ import AVFoundation
 import os
 
 
-
-
 struct GlobalConstants {
     static let kBipDurationSeconds = 0.02
     static let kTempoChangeResponsivenessSeconds = 0.25
-
     static let kDivisions = [2, 4, 8, 16]
 }
 
@@ -60,11 +57,11 @@ public class Metronome : NSObject {
     var divisionIndex = 0
     
     var bufferNumber = 0
-    var bufferSampleRate = 0.0
+    let bufferSampleRate: Double
     
     var syncQueue = DispatchQueue(label: "Metronome")
 
-    var nextBeatSampleTime = 0.0
+    var nextBeatSampleTime: AVAudioFramePosition = 0
     /// controls responsiveness to tempo changes
     var beatsToScheduleAhead  = 0
     var beatsScheduled = 0
@@ -75,6 +72,7 @@ public class Metronome : NSObject {
     public init(audioFormat:AVAudioFormat) {
         
         self.audioFormat = audioFormat
+        self.bufferSampleRate = audioFormat.sampleRate
         super.init()
         
         initiazeDefaults()
@@ -101,7 +99,7 @@ public class Metronome : NSObject {
         engine.attach(player)
         engine.connect(player, to:  engine.outputNode, fromBus: 0, toBus: 0, format: audioFormat)
         
-        bufferSampleRate = audioFormat.sampleRate
+        
         
     }
     
@@ -218,9 +216,7 @@ public class Metronome : NSObject {
         while (beatsScheduled < beatsToScheduleAhead) {
             // Schedule the beat.
             
-            
-            let beatSampleTime: AVAudioFramePosition = AVAudioFramePosition(nextBeatSampleTime)
-            let playerBeatTime: AVAudioTime = AVAudioTime(sampleTime: AVAudioFramePosition(beatSampleTime), atRate: bufferSampleRate)
+            let playerBeatTime = AVAudioTime(sampleTime: nextBeatSampleTime, atRate: bufferSampleRate)
             // This time is relative to the player's start time.
             
             player.scheduleBuffer(soundBuffer[bufferNumber]!, at: playerBeatTime, options: AVAudioPlayerNodeBufferOptions(rawValue: 0), completionHandler: {
@@ -260,7 +256,7 @@ public class Metronome : NSObject {
             }
             beatNumber = (beatNumber + 1) % meter
             
-            let samplesPerBeat = timeInterval * bufferSampleRate
+            let samplesPerBeat = AVAudioFramePosition(timeInterval * bufferSampleRate)
             nextBeatSampleTime += samplesPerBeat
         }
     }
