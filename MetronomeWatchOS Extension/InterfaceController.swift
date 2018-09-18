@@ -47,7 +47,7 @@ class InterfaceController: WKInterfaceController {
       
         crownSequencer.delegate = self
     
-        NotificationCenter.default.addObserver(self, selector: #selector(handleMediaServicesWereReset), name: NSNotification.Name.AVAudioSessionMediaServicesWereReset, object: AVAudioSession.sharedInstance())
+        NotificationCenter.default.addObserver(self, selector: #selector(handleMediaServicesWereReset), name: AVAudioSession.mediaServicesWereResetNotification, object: AVAudioSession.sharedInstance())
     }
     
 

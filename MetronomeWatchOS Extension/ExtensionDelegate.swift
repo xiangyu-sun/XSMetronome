@@ -17,7 +17,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default, options: .duckOthers)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch  {
             

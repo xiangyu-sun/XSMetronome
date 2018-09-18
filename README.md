@@ -40,7 +40,7 @@ Xcode 8.2.1 or later, macOS 10.12, iOS 10.2, watchOS 3.1 SDKs
 ### Runtime
 
 macOS 10.9 or greater
-iOS 9.3 or greater
-watchOS 3.0 or greater
+iOS 11.4 or greater
+watchOS 4 or greater
 
 Copyright (C) 2017 Apple Inc. All rights reserved.
