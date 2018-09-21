@@ -11,17 +11,18 @@ import AVFoundation
 import os
 
 
-struct GlobalConstants {
-    static let kBipDurationSeconds = 0.02
-    static let kTempoChangeResponsivenessSeconds = 0.25
-    static let kDivisions = [2, 4, 8, 16]
+public protocol MetronomeDelegate: class {
+    func metronomeTicking(_ metronome: Metronome, currentTick: Int)
 }
 
-@objc public protocol MetronomeDelegate: class {
-    @objc func metronomeTicking(_ metronome: Metronome, currentTick: Int)
-}
+public final class Metronome {
+    
+    struct Constants {
+        static let kBipDurationSeconds = 0.02
+        static let kTempoChangeResponsivenessSeconds = 0.25
+        static let kDivisions = [2, 4, 8, 16]
+    }
 
-public class Metronome : NSObject {
     
     struct MeterConfig{
         static let min = 2
@@ -37,10 +38,8 @@ public class Metronome : NSObject {
     
     public private(set) var meter = 0
     public private(set) var division = 0
-    
     public private(set) var tempoBPM = 0
     public private(set) var beatNumber  = 0
-    
     public private(set) var isPlaying = false
     
     public weak var delegate: MetronomeDelegate?
@@ -72,12 +71,11 @@ public class Metronome : NSObject {
         
         self.audioFormat = audioFormat
         self.bufferSampleRate = audioFormat.sampleRate
-        super.init()
-        
+
         initiazeDefaults()
         
         // How many audio frames?
-        let bipFrames = UInt32(GlobalConstants.kBipDurationSeconds * audioFormat.sampleRate)
+        let bipFrames = UInt32(Constants.kBipDurationSeconds * audioFormat.sampleRate)
         
         // Use two triangle waves which are generate for the metronome bips.
         // Create the PCM buffers.
@@ -108,13 +106,13 @@ public class Metronome : NSObject {
     }
     
     public func start() throws {
+        
         // Start the engine without playing anything yet.
-        
         try engine.start()
-        
         isPlaying = true
-        nextBeatSampleTime = 0
         
+        updateTimeInterval()
+        nextBeatSampleTime = 0
         beatNumber = 0
         bufferNumber = 0
         
@@ -129,7 +127,7 @@ public class Metronome : NSObject {
         timeInterval = 0
         divisionIndex = 1
         beatNumber = 0
-        division = GlobalConstants.kDivisions[divisionIndex]
+        division = Constants.kDivisions[divisionIndex]
         beatsScheduled = 0;
     }
 
@@ -192,11 +190,11 @@ public class Metronome : NSObject {
         
         divisionIndex += increment
         
-        divisionIndex = min(max(divisionIndex, 0), GlobalConstants.kDivisions.count - 1)
+        divisionIndex = min(max(divisionIndex, 0), Constants.kDivisions.count - 1)
         
-        division = GlobalConstants.kDivisions[divisionIndex];
+        division = Constants.kDivisions[divisionIndex];
         
-        updateTimeInterval()
+        
         
         if (wasRunning) {
             try start()
@@ -250,7 +248,7 @@ public class Metronome : NSObject {
                 let nodeBeatTime: AVAudioTime = player.nodeTime(forPlayerTime: playerBeatTime)!
                 let output: AVAudioIONode = engine.outputNode
                 
-                print(" \(playerBeatTime), \(nodeBeatTime), \(output.presentationLatency)")
+                os_log(" %@, %@, %f", playerBeatTime, nodeBeatTime, output.presentationLatency)
                 
                 let latencyHostTicks: UInt64 = AVAudioTime.hostTime(forSeconds: output.presentationLatency)
                 let dispatchTime = DispatchTime(uptimeNanoseconds: nodeBeatTime.hostTime + latencyHostTicks)
@@ -268,9 +266,9 @@ public class Metronome : NSObject {
 
     func updateTimeInterval() {
         
-        timeInterval = (60.0 / Double(tempoBPM)) * (4.0 / Double(GlobalConstants.kDivisions[divisionIndex]))
+        timeInterval = (60.0 / Double(tempoBPM)) * (4.0 / Double(Constants.kDivisions[divisionIndex]))
         
-        beatsToScheduleAhead = Int(GlobalConstants.kTempoChangeResponsivenessSeconds / timeInterval)
+        beatsToScheduleAhead = Int(Constants.kTempoChangeResponsivenessSeconds / timeInterval)
         
         beatsToScheduleAhead = max(beatsToScheduleAhead, 1)
     }

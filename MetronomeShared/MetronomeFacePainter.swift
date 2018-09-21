@@ -8,9 +8,7 @@
 
 import Foundation
 
-
-
-public class MetronomeFacePainter {
+public final class MetronomeFacePainter {
 
     let paintConfiguration: FacePaintConfiguration
     let imageAccessQueue = DispatchQueue(label: "ForegroudnImage", qos: .userInitiated)
@@ -21,7 +19,7 @@ public class MetronomeFacePainter {
         return CGPoint(x: paintConfiguration.contentFrame.size.width / 2.0, y: paintConfiguration.contentFrame.size.height / 2.0)
     }
     var radius: CGFloat {
-        return min(self.paintConfiguration.contentFrame.size.width / 2.0, self.paintConfiguration.contentFrame.size.height / 2.0) - (paintConfiguration.arcWidth / 2.0)
+        return min(self.paintConfiguration.contentFrame.size.width / 2.0, paintConfiguration.contentFrame.size.height / 2.0) - (paintConfiguration.arcWidth / 2.0)
     }
     
     public subscript(index: Int) -> UIImage {
@@ -39,6 +37,17 @@ public class MetronomeFacePainter {
 
     public init(faceConfiguration: FacePaintConfiguration) {
         paintConfiguration = faceConfiguration
+    }
+    
+    public func drawArchsWith(meter: Int, updateBackground: (UIImage) -> Void)  {
+        
+        let stepAngle = CGFloat(((2 * .pi) / Double(meter))) - paintConfiguration.arcGapAngle
+        
+        if let backgroundImage = backgroundImage(meter: meter, stepAngle: stepAngle) {
+            updateBackground(backgroundImage)
+        }
+        
+        redrawForegroundRing(meter: meter, stepAngle: stepAngle)
     }
     
 
@@ -78,10 +87,12 @@ public class MetronomeFacePainter {
         return backgroundImage
     }
     
-    func foregroudnRing(meter: Int, stepAngle: CGFloat) {
+    func redrawForegroundRing(meter: Int, stepAngle: CGFloat) {
         imageAccessQueue.sync {
             foregroundArcArray.removeAll()
         }
+        
+        foregroundArcArray.reserveCapacity(meter)
         
         var startAngle = (paintConfiguration.arcGapAngle / 2.0) - (1.5 * .pi/2)
         
@@ -112,23 +123,12 @@ public class MetronomeFacePainter {
             
             let foregroundImage = UIImage(cgImage: cgImage)
             imageAccessQueue.sync {
-                foregroundArcArray.append(foregroundImage)
+                self.foregroundArcArray.append(foregroundImage)
             }
             
             UIGraphicsEndImageContext()
             
             startAngle += stepAngle + paintConfiguration.arcGapAngle
         }
-    }
-    
-    public func drawArchsWith(meter: Int, updateBackground: (UIImage) -> Void)  {
-        
-        let stepAngle = CGFloat(((2.0 * .pi) / Double(meter))) - paintConfiguration.arcGapAngle
-        
-        if let backgroundImage = backgroundImage(meter: meter, stepAngle: stepAngle) {
-            updateBackground(backgroundImage)
-        }
-        
-        foregroudnRing(meter: meter, stepAngle: stepAngle)
     }
 }
