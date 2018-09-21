@@ -17,7 +17,11 @@ public struct FacePaintConfiguration {
     public let firstElementFillColor: CGColor
     public let backgroundFillColor: CGColor
     
-    public init(scale: CGFloat, contentFrame: CGRect, arcWidth: CGFloat = 8, arcGapAngle: CGFloat = (16.0 * .pi) / 180.0, foregroundFillColor: CGColor, firstElementFillColor: CGColor, backgroundFillColor: CGColor) {
+    public init(scale: CGFloat, contentFrame: CGRect, arcWidth: CGFloat = 8, arcGapAngle: CGFloat = (16.0 * .pi) / 180.0,
+                foregroundFillColor: CGColor = UIColor(red: 0.301, green: 0.556, blue: 0.827, alpha: 1.0).cgColor,
+                firstElementFillColor: CGColor = UIColor(red: 0.301, green: 0.729, blue: 0.478, alpha: 1.0).cgColor,
+                backgroundFillColor: CGColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor) {
+        
         self.scale = scale
         self.contentFrame = contentFrame
         self.arcGapAngle = arcGapAngle

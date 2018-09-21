@@ -31,12 +31,9 @@ class InterfaceController: WKInterfaceController {
         guard let format = AVAudioFormat(standardFormatWithSampleRate: AVAudioSession.sharedInstance().sampleRate, channels: 1) else {
             return 
         }
+
         
-        let foregroundFillColor = UIColor(red: 0.301, green: 0.556, blue: 0.827, alpha: 1.0).cgColor
-        let firstElementFillColor  = UIColor(red: 0.301, green: 0.729, blue: 0.478, alpha: 1.0).cgColor
-        let backgroundFillColor  = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0).cgColor
-        
-        let faceConfig = FacePaintConfiguration(scale: WKInterfaceDevice.current().screenScale, contentFrame: self.contentFrame, foregroundFillColor: foregroundFillColor, firstElementFillColor: firstElementFillColor, backgroundFillColor: backgroundFillColor)
+        let faceConfig = FacePaintConfiguration(scale: WKInterfaceDevice.current().screenScale, contentFrame: self.contentFrame)
         
         faceDrawer  = MetronomeFacePainter(faceConfiguration: faceConfig)
         metronome = Metronome(audioFormat: format)
@@ -85,7 +82,7 @@ class InterfaceController: WKInterfaceController {
     
     func updateArcWithTick(currentTick: Int) {
         if metronome.isPlaying {
-            foregroundArcsGroup.setBackgroundImage(faceDrawer.foregroundArcArray[currentTick])
+            foregroundArcsGroup.setBackgroundImage(faceDrawer[currentTick])
         } else {
             foregroundArcsGroup.setBackgroundImage(nil)
         }
@@ -147,6 +144,7 @@ class InterfaceController: WKInterfaceController {
             try? metronome.start()
         }
     }
+
     
     
     
@@ -155,7 +153,9 @@ class InterfaceController: WKInterfaceController {
 
 extension InterfaceController: MetronomeDelegate {
     func metronomeTicking(_ metronome: Metronome, currentTick: Int) {
-        updateArcWithTick(currentTick: currentTick)
+        DispatchQueue.main.async {
+            self.updateArcWithTick(currentTick: currentTick)
+        }
     }
 }
 

@@ -45,19 +45,18 @@ public class Metronome : NSObject {
     
     public weak var delegate: MetronomeDelegate?
     
-    
     let engine: AVAudioEngine = AVAudioEngine()
     /// owned by engine
     let player: AVAudioPlayerNode = AVAudioPlayerNode()
     
-    var audioFormat: AVAudioFormat
+    let bufferSampleRate: Double
+    let audioFormat: AVAudioFormat
     var soundBuffer = [AVAudioPCMBuffer?]()
     
     var timeInterval: TimeInterval = 0
     var divisionIndex = 0
     
     var bufferNumber = 0
-    let bufferSampleRate: Double
     
     var syncQueue = DispatchQueue(label: "Metronome")
 
@@ -90,7 +89,7 @@ public class Metronome : NSObject {
         soundBuffer[1]?.frameLength = bipFrames
         
         // Generate the metronme bips, first buffer will be A440 and the second buffer Middle C.
-        let wg1 = TriangleWaveGenerator(sampleRate: Float(audioFormat.sampleRate), frequency: 660.0)
+        let wg1 = TriangleWaveGenerator(sampleRate: Float(audioFormat.sampleRate), frequency: 261.6)
         let wg2 = TriangleWaveGenerator(sampleRate: Float(audioFormat.sampleRate))
         
         wg1.render(soundBuffer[0]!)
@@ -98,8 +97,6 @@ public class Metronome : NSObject {
         
         engine.attach(player)
         engine.connect(player, to:  engine.outputNode, fromBus: 0, toBus: 0, format: audioFormat)
-        
-        
         
     }
     
@@ -166,6 +163,13 @@ public class Metronome : NSObject {
         tempoBPM += increment;
         
         tempoBPM = min(max(tempoBPM, TempoConfig.min), TempoConfig.max)
+        
+        updateTimeInterval()
+    }
+    
+    public func setTempo(to value: Int) {
+        
+        tempoBPM = min(max(value, TempoConfig.min), TempoConfig.max)
         
         updateTimeInterval()
     }

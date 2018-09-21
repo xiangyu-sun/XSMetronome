@@ -1,23 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="MainViewController" customModule="Metronome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-CL-MjR">
+                                <rect key="frame" x="12" y="168" width="351" height="351"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NA2-2i-nhl">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="351"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nFc-bV-KTL">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="351"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZA-Na-Go2">
+                                        <rect key="frame" x="145" y="160" width="61.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NA2-2i-nhl" secondAttribute="trailing" id="3QR-TB-aoE"/>
+                                    <constraint firstItem="nFc-bV-KTL" firstAttribute="leading" secondItem="NA2-2i-nhl" secondAttribute="leading" id="4hf-0W-IVs"/>
+                                    <constraint firstItem="NA2-2i-nhl" firstAttribute="top" secondItem="nSa-CL-MjR" secondAttribute="top" id="9qN-Fa-8pr"/>
+                                    <constraint firstAttribute="width" secondItem="nSa-CL-MjR" secondAttribute="height" multiplier="1:1" id="AnB-As-K3F"/>
+                                    <constraint firstItem="nFc-bV-KTL" firstAttribute="bottom" secondItem="NA2-2i-nhl" secondAttribute="bottom" id="KXN-X6-v5V"/>
+                                    <constraint firstItem="XZA-Na-Go2" firstAttribute="centerY" secondItem="nSa-CL-MjR" secondAttribute="centerY" id="eYq-ID-11Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="NA2-2i-nhl" secondAttribute="bottom" id="g7u-yR-W2y"/>
+                                    <constraint firstItem="nFc-bV-KTL" firstAttribute="top" secondItem="NA2-2i-nhl" secondAttribute="top" id="gYv-wM-i4d"/>
+                                    <constraint firstItem="nFc-bV-KTL" firstAttribute="trailing" secondItem="NA2-2i-nhl" secondAttribute="trailing" id="lZB-MK-6Wq"/>
+                                    <constraint firstItem="NA2-2i-nhl" firstAttribute="leading" secondItem="nSa-CL-MjR" secondAttribute="leading" id="sDv-Nq-y68"/>
+                                    <constraint firstItem="XZA-Na-Go2" firstAttribute="centerX" secondItem="nSa-CL-MjR" secondAttribute="centerX" id="tYh-ts-tsY"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Qy-jD-MSC">
+                                <rect key="frame" x="12" y="82.5" width="351" height="61.5"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="40" maxValue="208" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZZ-ZR-W59">
+                                        <rect key="frame" x="-2" y="0.0" width="355" height="31"/>
+                                        <connections>
+                                            <action selector="tempoChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="QNc-Ga-6dN"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyJ-3h-pD1">
+                                        <rect key="frame" x="0.0" y="30" width="351" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="nSa-CL-MjR" firstAttribute="centerY" secondItem="4qk-I5-YsI" secondAttribute="centerY" id="Dhp-hE-98s"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="nSa-CL-MjR" secondAttribute="trailing" constant="12" id="Jmt-hA-9bA"/>
+                            <constraint firstItem="0Qy-jD-MSC" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="SNE-eq-ufl"/>
+                            <constraint firstItem="0Qy-jD-MSC" firstAttribute="width" secondItem="nSa-CL-MjR" secondAttribute="width" id="ZOg-3T-GwS"/>
+                            <constraint firstItem="nSa-CL-MjR" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="12" id="aYh-OU-clg"/>
+                            <constraint firstItem="nSa-CL-MjR" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="bxH-BO-xzP"/>
+                            <constraint firstItem="nSa-CL-MjR" firstAttribute="top" secondItem="0Qy-jD-MSC" secondAttribute="bottom" constant="24" id="zZd-7p-ZIB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N1x-cR-fG4" appends="YES" id="Hwf-gO-3zB"/>
+                            <outletCollection property="gestureRecognizers" destination="QYg-6T-aes" appends="YES" id="N15-dT-dm4"/>
+                            <outletCollection property="gestureRecognizers" destination="ZFl-LK-eFM" appends="YES" id="yxJ-Oy-fbR"/>
+                            <outletCollection property="gestureRecognizers" destination="upJ-IP-u76" appends="YES" id="shr-Qc-lVf"/>
+                            <outletCollection property="gestureRecognizers" destination="2mz-4s-Byf" appends="YES" id="Lhv-67-7I7"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="backgroudnImageView" destination="NA2-2i-nhl" id="nDW-R6-O0d"/>
+                        <outlet property="faceView" destination="nSa-CL-MjR" id="ZeV-2k-7Ad"/>
+                        <outlet property="foregroundImageView" destination="nFc-bV-KTL" id="17Y-ar-5RE"/>
+                        <outlet property="meterLabel" destination="XZA-Na-Go2" id="mUO-U4-6Xr"/>
+                        <outlet property="swipeDownRestureRecongnizer" destination="2mz-4s-Byf" id="D2k-Zu-Sih"/>
+                        <outlet property="swipeLeftGestureRecongnizer" destination="ZFl-LK-eFM" id="sAz-QE-qLG"/>
+                        <outlet property="swipeRightGestureRecongnizer" destination="N1x-cR-fG4" id="CO4-Uc-QTP"/>
+                        <outlet property="swipeUpGestureRecongnizer" destination="upJ-IP-u76" id="UcL-VN-gyh"/>
+                        <outlet property="tempoLabel" destination="UyJ-3h-pD1" id="04L-nc-7M0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="N1x-cR-fG4">
+                    <connections>
+                        <action selector="swipeRight:" destination="BV1-FR-VrT" id="74g-Lu-OKX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ZFl-LK-eFM">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BV1-FR-VrT" id="sji-OP-RV9"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="upJ-IP-u76">
+                    <connections>
+                        <action selector="swipeUp:" destination="BV1-FR-VrT" id="jn9-0w-L3k"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="2mz-4s-Byf">
+                    <connections>
+                        <action selector="swipeDown:" destination="BV1-FR-VrT" id="jc7-Gm-c2C"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="QYg-6T-aes">
+                    <connections>
+                        <action selector="tap:" destination="BV1-FR-VrT" id="liY-aY-FOF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

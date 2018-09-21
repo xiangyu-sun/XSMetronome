@@ -13,10 +13,9 @@ import Foundation
 public class MetronomeFacePainter {
 
     let paintConfiguration: FacePaintConfiguration
-    
+    let imageAccessQueue = DispatchQueue(label: "ForegroudnImage", qos: .userInitiated)
 
-    public private(set) var foregroundArcArray = [UIImage]()
-    
+    private(set) var foregroundArcArray = [UIImage]()
 
     var center: CGPoint {
         return CGPoint(x: paintConfiguration.contentFrame.size.width / 2.0, y: paintConfiguration.contentFrame.size.height / 2.0)
@@ -25,6 +24,18 @@ public class MetronomeFacePainter {
         return min(self.paintConfiguration.contentFrame.size.width / 2.0, self.paintConfiguration.contentFrame.size.height / 2.0) - (paintConfiguration.arcWidth / 2.0)
     }
     
+    public subscript(index: Int) -> UIImage {
+        get {
+            return imageAccessQueue.sync {
+                return foregroundArcArray[index]
+            }
+        }
+        set(newValue) {
+            imageAccessQueue.sync {
+                foregroundArcArray[index] = newValue
+            }
+        }
+    }
 
     public init(faceConfiguration: FacePaintConfiguration) {
         paintConfiguration = faceConfiguration
@@ -68,7 +79,9 @@ public class MetronomeFacePainter {
     }
     
     func foregroudnRing(meter: Int, stepAngle: CGFloat) {
-        foregroundArcArray.removeAll()
+        imageAccessQueue.sync {
+            foregroundArcArray.removeAll()
+        }
         
         var startAngle = (paintConfiguration.arcGapAngle / 2.0) - (1.5 * .pi/2)
         
@@ -98,7 +111,9 @@ public class MetronomeFacePainter {
             }
             
             let foregroundImage = UIImage(cgImage: cgImage)
-            foregroundArcArray.append(foregroundImage)
+            imageAccessQueue.sync {
+                foregroundArcArray.append(foregroundImage)
+            }
             
             UIGraphicsEndImageContext()
             
