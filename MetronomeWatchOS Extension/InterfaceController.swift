@@ -31,9 +31,9 @@ class InterfaceController: WKInterfaceController {
         guard let format = AVAudioFormat(standardFormatWithSampleRate: AVAudioSession.sharedInstance().sampleRate, channels: 1) else {
             return 
         }
-
-        
-        let faceConfig = FacePaintConfiguration(scale: WKInterfaceDevice.current().screenScale, contentFrame: self.contentFrame)
+        let side = min(self.contentFrame.width, self.contentFrame.height)
+        let frame = CGRect(x: 0, y: 0, width:  side, height: side)
+        let faceConfig = FacePaintConfiguration(scale: WKInterfaceDevice.current().screenScale, contentFrame: frame)
         
         faceDrawer  = MetronomeFacePainter(faceConfiguration: faceConfig)
         metronome = Metronome(audioFormat: format)

@@ -20,7 +20,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var faceView: UIView!
     @IBOutlet weak var foregroundImageView: UIImageView!
     @IBOutlet weak var meterLabel: UILabel!
-    @IBOutlet weak var tempoLabel: UILabel!
+    @IBOutlet weak var tempoTextField: UITextField!
+    
+    
+    
     @IBOutlet var swipeRightGestureRecongnizer: UISwipeGestureRecognizer!
     
     @IBOutlet var swipeDownRestureRecongnizer: UISwipeGestureRecognizer!
@@ -68,13 +71,7 @@ class MainViewController: UIViewController {
             os_log("%@", error.localizedDescription)
         }
     }
-    
-
-    @IBAction func tempoChanged(_ sender: UISlider) {
-        metronome.setTempo(to: Int(sender.value))
-        updateTempoLabel()
-    }
-    
+  
 
     @IBAction func swipeDown(_ sender: Any) {
         try? metronome.incrementDivisionIndex(by: -1)
@@ -125,24 +122,34 @@ class MainViewController: UIViewController {
         }
     }
     @IBAction func tap(_ sender: Any) {
-        if metronome.isPlaying {
+       
+        if !metronome.isPlaying {
+            tempoTextField.resignFirstResponder()
+            try? metronome.start()
+        }else if metronome.isPlaying, !tempoTextField.resignFirstResponder() {
             metronome.stop()
             updateArcWithTick(currentTick: 0)
             wasRunning = true
-        }else {
-            try? metronome.start()
         }
     }
 
     
     
     func updateTempoLabel() {
-        tempoLabel.text = "\(metronome.tempoBPM) BPM"
+        tempoTextField.text = "\(metronome.tempoBPM)"
     }
     
     
     func updateMeterLabel() {
         meterLabel.text = "\(metronome.meter) / \(metronome.division)"
+    }
+}
+
+extension MainViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text, let tempo = Int(text) else { return }
+        metronome.setTempo(to:tempo)
+        updateTempoLabel()
     }
 }
 

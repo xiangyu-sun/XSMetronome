@@ -31,7 +31,6 @@
 		99FBD2B62143C381006F9C20 /* MetronomeWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		99FBD2BB2143C381006F9C20 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2BA2143C381006F9C20 /* InterfaceController.swift */; };
 		99FBD2BD2143C381006F9C20 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2BC2143C381006F9C20 /* ExtensionDelegate.swift */; };
-		99FBD2BF2143C381006F9C20 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2BE2143C381006F9C20 /* ComplicationController.swift */; };
 		99FBD2C12143C382006F9C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2C02143C382006F9C20 /* Assets.xcassets */; };
 		99FBD2C52143C382006F9C20 /* MetronomeWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */; };
 		99FBD2F02143C5B3006F9C20 /* MetronomeKit_WatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 99FBD2EE2143C5B3006F9C20 /* MetronomeKit_WatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -177,7 +176,6 @@
 		99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MetronomeWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2BA2143C381006F9C20 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		99FBD2BC2143C381006F9C20 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		99FBD2BE2143C381006F9C20 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		99FBD2C02143C382006F9C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99FBD2C22143C382006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetronomeKit_WatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,7 +347,6 @@
 			children = (
 				99FBD2BA2143C381006F9C20 /* InterfaceController.swift */,
 				99FBD2BC2143C381006F9C20 /* ExtensionDelegate.swift */,
-				99FBD2BE2143C381006F9C20 /* ComplicationController.swift */,
 				99FBD2C02143C382006F9C20 /* Assets.xcassets */,
 				99FBD2C22143C382006F9C20 /* Info.plist */,
 			);
@@ -722,7 +719,6 @@
 			files = (
 				99FBD2BD2143C381006F9C20 /* ExtensionDelegate.swift in Sources */,
 				99FBD2BB2143C381006F9C20 /* InterfaceController.swift in Sources */,
-				99FBD2BF2143C381006F9C20 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
