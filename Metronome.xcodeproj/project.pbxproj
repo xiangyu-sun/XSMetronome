@@ -168,7 +168,6 @@
 		99FBD28B2143BD83006F9C20 /* MetronomeKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2922143BD84006F9C20 /* MetronomeKit_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeKit_iOSTests.swift; sourceTree = "<group>"; };
 		99FBD2942143BD84006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FBD2A12143C2E8006F9C20 /* Metronome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Metronome-Bridging-Header.h"; sourceTree = "<group>"; };
 		99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetronomeWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2AC2143C380006F9C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		99FBD2AE2143C381006F9C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -280,7 +279,6 @@
 				99FBD2302143BA28006F9C20 /* Assets.xcassets */,
 				99FBD2322143BA28006F9C20 /* LaunchScreen.storyboard */,
 				99FBD2352143BA28006F9C20 /* Info.plist */,
-				99FBD2A12143C2E8006F9C20 /* Metronome-Bridging-Header.h */,
 			);
 			path = Metronome;
 			sourceTree = "<group>";
@@ -935,7 +933,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Metronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Metronome/Metronome-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -957,7 +955,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Metronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Metronome/Metronome-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
