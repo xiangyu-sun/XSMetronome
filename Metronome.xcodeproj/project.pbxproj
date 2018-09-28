@@ -15,6 +15,22 @@
 		997638B12145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
 		997638B22145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
 		997638B32145807100952DA7 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
+		99787B78215E90A600F9D14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B77215E90A600F9D14A /* AppDelegate.swift */; };
+		99787B7A215E90A600F9D14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B79215E90A600F9D14A /* ViewController.swift */; };
+		99787B7D215E90A600F9D14A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99787B7B215E90A600F9D14A /* Main.storyboard */; };
+		99787B7F215E90A800F9D14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99787B7E215E90A800F9D14A /* Assets.xcassets */; };
+		99787B8A215E90A800F9D14A /* TVMetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B89215E90A800F9D14A /* TVMetronomeTests.swift */; };
+		99787B95215E90A900F9D14A /* TVMetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B94215E90A900F9D14A /* TVMetronomeUITests.swift */; };
+		99787BAE215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; };
+		99787BB5215E90D500F9D14A /* MetronomeKit_TVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */; };
+		99787BB7215E90D500F9D14A /* MetronomeKit_TVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99787BBA215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; };
+		99787BBB215E90D500F9D14A /* MetronomeKit_TVOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99787BC3215E911900F9D14A /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
+		99787BC4215E911900F9D14A /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
+		99787BC5215E911900F9D14A /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
+		99787BC6215E911900F9D14A /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
+		99787BC8215E99F000F9D14A /* FocusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787BC7215E99F000F9D14A /* FocusableView.swift */; };
 		99FBD2242143BA26006F9C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2232143BA26006F9C20 /* AppDelegate.swift */; };
 		99FBD22F2143BA26006F9C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD22D2143BA26006F9C20 /* Main.storyboard */; };
 		99FBD2312143BA28006F9C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2302143BA28006F9C20 /* Assets.xcassets */; };
@@ -40,6 +56,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		99787B86215E90A800F9D14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99787B74215E90A600F9D14A;
+			remoteInfo = TVMetronome;
+		};
+		99787B91215E90A900F9D14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99787B74215E90A600F9D14A;
+			remoteInfo = TVMetronome;
+		};
+		99787BAF215E90D500F9D14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99787BA4215E90D500F9D14A;
+			remoteInfo = MetronomeKit_TVOS;
+		};
+		99787BB1215E90D500F9D14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99787B74215E90A600F9D14A;
+			remoteInfo = TVMetronome;
+		};
+		99787BB8215E90D500F9D14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99787BA4215E90D500F9D14A;
+			remoteInfo = MetronomeKit_TVOS;
+		};
 		99FBD23B2143BA28006F9C20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
@@ -99,6 +150,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		99787BBF215E90D500F9D14A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				99787BBB215E90D500F9D14A /* MetronomeKit_TVOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99FBD2782143BC5B006F9C20 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +212,25 @@
 		991C88E921500A98005537D4 /* FacePaintConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePaintConfiguration.swift; sourceTree = "<group>"; };
 		9952DDC12154DE4900F3C184 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		997638B02145728D00952DA7 /* TWGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWGenerator.swift; sourceTree = "<group>"; };
+		99787B75215E90A600F9D14A /* TVMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99787B77215E90A600F9D14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99787B79215E90A600F9D14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99787B7C215E90A600F9D14A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99787B7E215E90A800F9D14A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99787B80215E90A800F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99787B85215E90A800F9D14A /* TVMetronomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMetronomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99787B89215E90A800F9D14A /* TVMetronomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMetronomeTests.swift; sourceTree = "<group>"; };
+		99787B8B215E90A800F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99787B94215E90A900F9D14A /* TVMetronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMetronomeUITests.swift; sourceTree = "<group>"; };
+		99787B96215E90A900F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetronomeKit_TVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetronomeKit_TVOS.h; sourceTree = "<group>"; };
+		99787BA8215E90D500F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeKit_TVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeKit_TVOSTests.swift; sourceTree = "<group>"; };
+		99787BB6215E90D500F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99787BC7215E99F000F9D14A /* FocusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableView.swift; sourceTree = "<group>"; };
 		99FBD2202143BA26006F9C20 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2232143BA26006F9C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99FBD22E2143BA26006F9C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -184,6 +265,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		99787B72215E90A600F9D14A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787BBA215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B82215E90A800F9D14A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B8D215E90A800F9D14A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BA2215E90D500F9D14A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BAA215E90D500F9D14A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787BAE215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99FBD21D2143BA26006F9C20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +357,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99787B76215E90A600F9D14A /* TVMetronome */ = {
+			isa = PBXGroup;
+			children = (
+				99787B77215E90A600F9D14A /* AppDelegate.swift */,
+				99787B79215E90A600F9D14A /* ViewController.swift */,
+				99787B7B215E90A600F9D14A /* Main.storyboard */,
+				99787B7E215E90A800F9D14A /* Assets.xcassets */,
+				99787B80215E90A800F9D14A /* Info.plist */,
+			);
+			path = TVMetronome;
+			sourceTree = "<group>";
+		};
+		99787B88215E90A800F9D14A /* TVMetronomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				99787B89215E90A800F9D14A /* TVMetronomeTests.swift */,
+				99787B8B215E90A800F9D14A /* Info.plist */,
+			);
+			path = TVMetronomeTests;
+			sourceTree = "<group>";
+		};
+		99787B93215E90A900F9D14A /* TVMetronomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99787B94215E90A900F9D14A /* TVMetronomeUITests.swift */,
+				99787B96215E90A900F9D14A /* Info.plist */,
+			);
+			path = TVMetronomeUITests;
+			sourceTree = "<group>";
+		};
+		99787BA6215E90D500F9D14A /* MetronomeKit_TVOS */ = {
+			isa = PBXGroup;
+			children = (
+				99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */,
+				99787BC7215E99F000F9D14A /* FocusableView.swift */,
+				99787BA8215E90D500F9D14A /* Info.plist */,
+			);
+			path = MetronomeKit_TVOS;
+			sourceTree = "<group>";
+		};
+		99787BB3215E90D500F9D14A /* MetronomeKit_TVOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */,
+				99787BB6215E90D500F9D14A /* Info.plist */,
+			);
+			path = MetronomeKit_TVOSTests;
+			sourceTree = "<group>";
+		};
 		99FBD2172143BA26006F9C20 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +418,11 @@
 				99FBD2AA2143C380006F9C20 /* MetronomeWatchOS */,
 				99FBD2B92143C381006F9C20 /* MetronomeWatchOS Extension */,
 				99FBD2ED2143C5B3006F9C20 /* MetronomeKit_WatchOS */,
+				99787B76215E90A600F9D14A /* TVMetronome */,
+				99787B88215E90A800F9D14A /* TVMetronomeTests */,
+				99787B93215E90A900F9D14A /* TVMetronomeUITests */,
+				99787BA6215E90D500F9D14A /* MetronomeKit_TVOS */,
+				99787BB3215E90D500F9D14A /* MetronomeKit_TVOSTests */,
 				99FBD2212143BA26006F9C20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,6 +438,11 @@
 				99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */,
 				99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */,
 				99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */,
+				99787B75215E90A600F9D14A /* TVMetronome.app */,
+				99787B85215E90A800F9D14A /* TVMetronomeTests.xctest */,
+				99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */,
+				99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */,
+				99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,6 +540,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		99787BA0215E90D500F9D14A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787BB7215E90D500F9D14A /* MetronomeKit_TVOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99FBD2802143BD83006F9C20 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +567,98 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		99787B74215E90A600F9D14A /* TVMetronome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99787B97215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronome" */;
+			buildPhases = (
+				99787B71215E90A600F9D14A /* Sources */,
+				99787B72215E90A600F9D14A /* Frameworks */,
+				99787B73215E90A600F9D14A /* Resources */,
+				99787BBF215E90D500F9D14A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99787BB9215E90D500F9D14A /* PBXTargetDependency */,
+			);
+			name = TVMetronome;
+			productName = TVMetronome;
+			productReference = 99787B75215E90A600F9D14A /* TVMetronome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99787B84215E90A800F9D14A /* TVMetronomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99787B9A215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronomeTests" */;
+			buildPhases = (
+				99787B81215E90A800F9D14A /* Sources */,
+				99787B82215E90A800F9D14A /* Frameworks */,
+				99787B83215E90A800F9D14A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99787B87215E90A800F9D14A /* PBXTargetDependency */,
+			);
+			name = TVMetronomeTests;
+			productName = TVMetronomeTests;
+			productReference = 99787B85215E90A800F9D14A /* TVMetronomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99787B8F215E90A800F9D14A /* TVMetronomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99787B9D215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronomeUITests" */;
+			buildPhases = (
+				99787B8C215E90A800F9D14A /* Sources */,
+				99787B8D215E90A800F9D14A /* Frameworks */,
+				99787B8E215E90A800F9D14A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99787B92215E90A900F9D14A /* PBXTargetDependency */,
+			);
+			name = TVMetronomeUITests;
+			productName = TVMetronomeUITests;
+			productReference = 99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99787BBC215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOS" */;
+			buildPhases = (
+				99787BA0215E90D500F9D14A /* Headers */,
+				99787BA1215E90D500F9D14A /* Sources */,
+				99787BA2215E90D500F9D14A /* Frameworks */,
+				99787BA3215E90D500F9D14A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetronomeKit_TVOS;
+			productName = MetronomeKit_TVOS;
+			productReference = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99787BAC215E90D500F9D14A /* MetronomeKit_TVOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99787BC0215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOSTests" */;
+			buildPhases = (
+				99787BA9215E90D500F9D14A /* Sources */,
+				99787BAA215E90D500F9D14A /* Frameworks */,
+				99787BAB215E90D500F9D14A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99787BB0215E90D500F9D14A /* PBXTargetDependency */,
+				99787BB2215E90D500F9D14A /* PBXTargetDependency */,
+			);
+			name = MetronomeKit_TVOSTests;
+			productName = MetronomeKit_TVOSTests;
+			productReference = 99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		99FBD21F2143BA26006F9C20 /* Metronome */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99FBD24E2143BA28006F9C20 /* Build configuration list for PBXNativeTarget "Metronome" */;
@@ -536,10 +813,28 @@
 		99FBD2182143BA26006F9C20 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "xiangyu sun";
 				TargetAttributes = {
+					99787B74215E90A600F9D14A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					99787B84215E90A800F9D14A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 99787B74215E90A600F9D14A;
+					};
+					99787B8F215E90A800F9D14A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 99787B74215E90A600F9D14A;
+					};
+					99787BA4215E90D500F9D14A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					99787BAC215E90D500F9D14A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 99787B74215E90A600F9D14A;
+					};
 					99FBD21F2143BA26006F9C20 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
@@ -597,11 +892,53 @@
 				99FBD2A82143C380006F9C20 /* MetronomeWatchOS */,
 				99FBD2B42143C381006F9C20 /* MetronomeWatchOS Extension */,
 				99FBD2EB2143C5B3006F9C20 /* MetronomeKit_WatchOS */,
+				99787B74215E90A600F9D14A /* TVMetronome */,
+				99787B84215E90A800F9D14A /* TVMetronomeTests */,
+				99787B8F215E90A800F9D14A /* TVMetronomeUITests */,
+				99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */,
+				99787BAC215E90D500F9D14A /* MetronomeKit_TVOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		99787B73215E90A600F9D14A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787B7F215E90A800F9D14A /* Assets.xcassets in Resources */,
+				99787B7D215E90A600F9D14A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B83215E90A800F9D14A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B8E215E90A800F9D14A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BA3215E90D500F9D14A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BAB215E90D500F9D14A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99FBD21E2143BA26006F9C20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,6 +1004,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		99787B71215E90A600F9D14A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787B7A215E90A600F9D14A /* ViewController.swift in Sources */,
+				99787B78215E90A600F9D14A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B81215E90A800F9D14A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787B8A215E90A800F9D14A /* TVMetronomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787B8C215E90A800F9D14A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787B95215E90A900F9D14A /* TVMetronomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BA1215E90D500F9D14A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787BC5215E911900F9D14A /* FacePaintConfiguration.swift in Sources */,
+				99787BC3215E911900F9D14A /* Metronome.swift in Sources */,
+				99787BC6215E911900F9D14A /* TWGenerator.swift in Sources */,
+				99787BC8215E99F000F9D14A /* FocusableView.swift in Sources */,
+				99787BC4215E911900F9D14A /* MetronomeFacePainter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99787BA9215E90D500F9D14A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99787BB5215E90D500F9D14A /* MetronomeKit_TVOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99FBD21C2143BA26006F9C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -734,6 +1116,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		99787B87215E90A800F9D14A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99787B74215E90A600F9D14A /* TVMetronome */;
+			targetProxy = 99787B86215E90A800F9D14A /* PBXContainerItemProxy */;
+		};
+		99787B92215E90A900F9D14A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99787B74215E90A600F9D14A /* TVMetronome */;
+			targetProxy = 99787B91215E90A900F9D14A /* PBXContainerItemProxy */;
+		};
+		99787BB0215E90D500F9D14A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */;
+			targetProxy = 99787BAF215E90D500F9D14A /* PBXContainerItemProxy */;
+		};
+		99787BB2215E90D500F9D14A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99787B74215E90A600F9D14A /* TVMetronome */;
+			targetProxy = 99787BB1215E90D500F9D14A /* PBXContainerItemProxy */;
+		};
+		99787BB9215E90D500F9D14A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */;
+			targetProxy = 99787BB8215E90D500F9D14A /* PBXContainerItemProxy */;
+		};
 		99FBD23C2143BA28006F9C20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 99FBD21F2143BA26006F9C20 /* Metronome */;
@@ -777,6 +1184,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		99787B7B215E90A600F9D14A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99787B7C215E90A600F9D14A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		99FBD22D2143BA26006F9C20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -804,6 +1219,259 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		99787B98215E90A900F9D14A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		99787B99215E90A900F9D14A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		99787B9B215E90A900F9D14A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		99787B9C215E90A900F9D14A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		99787B9E215E90A900F9D14A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = TVMetronome;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		99787B9F215E90A900F9D14A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = TVMetronomeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TVMetronomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = TVMetronome;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
+		99787BBD215E90D500F9D14A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetronomeKit_TVOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99787BBE215E90D500F9D14A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MetronomeKit_TVOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		99787BC1215E90D500F9D14A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = MetronomeKit_TVOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		99787BC2215E90D500F9D14A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = MetronomeKit_TVOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Release;
+		};
 		99FBD24C2143BA28006F9C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -855,7 +1523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -909,7 +1577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1157,7 +1825,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1179,7 +1847,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1198,7 +1866,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1217,7 +1885,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1248,7 +1916,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1279,13 +1947,58 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		99787B97215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99787B98215E90A900F9D14A /* Debug */,
+				99787B99215E90A900F9D14A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99787B9A215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99787B9B215E90A900F9D14A /* Debug */,
+				99787B9C215E90A900F9D14A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99787B9D215E90A900F9D14A /* Build configuration list for PBXNativeTarget "TVMetronomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99787B9E215E90A900F9D14A /* Debug */,
+				99787B9F215E90A900F9D14A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99787BBC215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99787BBD215E90D500F9D14A /* Debug */,
+				99787BBE215E90D500F9D14A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99787BC0215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99787BC1215E90D500F9D14A /* Debug */,
+				99787BC2215E90D500F9D14A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		99FBD21B2143BA26006F9C20 /* Build configuration list for PBXProject "Metronome" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

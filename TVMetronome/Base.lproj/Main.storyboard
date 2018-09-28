@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TVMetronome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-0g-yWe" customClass="FocusableView" customModule="MetronomeKit_TVOS">
+                                <rect key="frame" x="528" y="108" width="864" height="864"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ojk-PN-qH6">
+                                        <rect key="frame" x="0.0" y="0.0" width="864" height="864"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YXi-tI-lSm">
+                                        <rect key="frame" x="0.0" y="0.0" width="864" height="864"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBn-NB-MO3">
+                                        <rect key="frame" x="386" y="409" width="93" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Ojk-PN-qH6" firstAttribute="top" secondItem="Bqq-0g-yWe" secondAttribute="top" id="15C-av-ffe"/>
+                                    <constraint firstAttribute="trailing" secondItem="YXi-tI-lSm" secondAttribute="trailing" id="6Dh-eR-MNB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ojk-PN-qH6" secondAttribute="bottom" id="8i6-0H-dQD"/>
+                                    <constraint firstItem="Ojk-PN-qH6" firstAttribute="leading" secondItem="Bqq-0g-yWe" secondAttribute="leading" id="APj-Ap-fme"/>
+                                    <constraint firstItem="UBn-NB-MO3" firstAttribute="centerX" secondItem="Bqq-0g-yWe" secondAttribute="centerX" id="Kk7-Cr-Ftw"/>
+                                    <constraint firstItem="YXi-tI-lSm" firstAttribute="top" secondItem="Bqq-0g-yWe" secondAttribute="top" id="Kv2-9g-Nlu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ojk-PN-qH6" secondAttribute="trailing" id="O3E-Fc-AZO"/>
+                                    <constraint firstAttribute="bottom" secondItem="YXi-tI-lSm" secondAttribute="bottom" id="gLI-FF-KxQ"/>
+                                    <constraint firstItem="YXi-tI-lSm" firstAttribute="leading" secondItem="Bqq-0g-yWe" secondAttribute="leading" id="vZF-0T-5wi"/>
+                                    <constraint firstItem="UBn-NB-MO3" firstAttribute="centerY" secondItem="Bqq-0g-yWe" secondAttribute="centerY" id="yBp-Wz-Jz9"/>
+                                    <constraint firstAttribute="width" secondItem="Bqq-0g-yWe" secondAttribute="height" multiplier="1:1" id="yfi-so-q4Q"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="BTY-aX-RSt" appends="YES" id="Pe5-gT-6Wk"/>
+                                    <outletCollection property="gestureRecognizers" destination="DiF-bP-Ldf" appends="YES" id="80o-Vm-RhO"/>
+                                    <outletCollection property="gestureRecognizers" destination="lGg-bt-8sa" appends="YES" id="WhG-jX-fJD"/>
+                                    <outletCollection property="gestureRecognizers" destination="B7S-L5-6YO" appends="YES" id="fjg-1A-RhQ"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NFm-zQ-oDY">
+                                <rect key="frame" x="90" y="108" width="426" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fIg-13-9fO">
+                                        <rect key="frame" x="0.0" y="0.0" width="426" height="46"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wgi-rt-p1i">
+                                                <rect key="frame" x="0.0" y="0.0" width="322" height="46"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZUf-1V-dX3"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-cW-oCH">
+                                                <rect key="frame" x="346" y="0.0" width="80" height="46"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Bqq-0g-yWe" firstAttribute="top" secondItem="wu6-TO-1qx" secondAttribute="top" constant="48" id="2IV-NX-Uun"/>
+                            <constraint firstItem="Bqq-0g-yWe" firstAttribute="centerX" secondItem="wu6-TO-1qx" secondAttribute="centerX" id="2ww-gA-RmY"/>
+                            <constraint firstItem="Bqq-0g-yWe" firstAttribute="centerY" secondItem="wu6-TO-1qx" secondAttribute="centerY" id="Pz0-Aa-chC"/>
+                            <constraint firstItem="NFm-zQ-oDY" firstAttribute="top" secondItem="Bqq-0g-yWe" secondAttribute="top" id="UWg-b3-jr7"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="bottom" secondItem="Bqq-0g-yWe" secondAttribute="bottom" constant="48" id="ZOX-gv-YIU"/>
+                            <constraint firstItem="NFm-zQ-oDY" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" id="etg-oj-sGo"/>
+                            <constraint firstItem="Bqq-0g-yWe" firstAttribute="leading" secondItem="NFm-zQ-oDY" secondAttribute="trailing" constant="12" id="gAb-bo-hCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DiF-bP-Ldf" appends="YES" id="LUS-fB-lQs"/>
+                            <outletCollection property="gestureRecognizers" destination="lGg-bt-8sa" appends="YES" id="jk4-cN-L9d"/>
+                            <outletCollection property="gestureRecognizers" destination="Vit-LD-Vhv" appends="YES" id="Vd1-Mo-x3b"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="backgroudnImageView" destination="Ojk-PN-qH6" id="BlA-nX-MVO"/>
+                        <outlet property="faceView" destination="Bqq-0g-yWe" id="brh-gn-upk"/>
+                        <outlet property="foregroundImageView" destination="YXi-tI-lSm" id="Kwz-cB-fRx"/>
+                        <outlet property="meterLabel" destination="UBn-NB-MO3" id="Iw8-gL-Tsj"/>
+                        <outlet property="tempoTextField" destination="Wgi-rt-p1i" id="4GG-Wd-RIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="DiF-bP-Ldf">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="NZg-Yk-QwE"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="lGg-bt-8sa">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="OFm-1R-BcJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Vit-LD-Vhv">
+                    <connections>
+                        <action selector="swipeDown:" destination="BYZ-38-t0r" id="Jd1-Es-fPl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="B7S-L5-6YO">
+                    <connections>
+                        <action selector="swipeUp:" destination="BYZ-38-t0r" id="kZb-3R-aNy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="BTY-aX-RSt">
+                    <pressTypeMask key="allowedPressTypes" select="YES"/>
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="HH2-Z0-mX3"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
