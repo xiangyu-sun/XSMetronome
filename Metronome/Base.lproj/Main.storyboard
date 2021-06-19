@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,7 +64,7 @@
                                             <outlet property="delegate" destination="BV1-FR-VrT" id="AVH-pS-TYh"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-S0-kqO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brq-S0-kqO">
                                         <rect key="frame" x="96" y="0.0" width="53.5" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,9 +114,6 @@
                                 <exclude reference="XQ5-gw-xRf"/>
                                 <exclude reference="czf-Wx-DyW"/>
                                 <exclude reference="rZf-Ml-crQ"/>
-                                <exclude reference="AUF-0D-C3C"/>
-                                <exclude reference="SNE-eq-ufl"/>
-                                <exclude reference="kG6-uK-kIy"/>
                                 <exclude reference="Dhp-hE-98s"/>
                                 <exclude reference="Pmb-FM-tML"/>
                                 <exclude reference="Q0d-QO-cQ9"/>
@@ -128,14 +125,17 @@
                                 <exclude reference="nqb-jG-vxD"/>
                                 <exclude reference="p2r-iO-zs4"/>
                                 <exclude reference="zZd-7p-ZIB"/>
+                                <exclude reference="AUF-0D-C3C"/>
+                                <exclude reference="SNE-eq-ufl"/>
+                                <exclude reference="kG6-uK-kIy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="czf-Wx-DyW"/>
-                                <include reference="AUF-0D-C3C"/>
                                 <include reference="ZzQ-O9-IEW"/>
                                 <include reference="p2r-iO-zs4"/>
+                                <include reference="AUF-0D-C3C"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -151,22 +151,22 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Jmt-hA-9bA"/>
-                                <include reference="SNE-eq-ufl"/>
                                 <include reference="Dhp-hE-98s"/>
                                 <include reference="aYh-OU-clg"/>
                                 <include reference="zZd-7p-ZIB"/>
+                                <include reference="SNE-eq-ufl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
                                 <exclude reference="XQ5-gw-xRf"/>
                                 <exclude reference="rZf-Ml-crQ"/>
-                                <include reference="kG6-uK-kIy"/>
                                 <include reference="Pmb-FM-tML"/>
                                 <include reference="Wkx-py-Q5j"/>
                                 <exclude reference="dCm-i5-vmJ"/>
                                 <include reference="hmg-qB-PVk"/>
                                 <include reference="nqb-jG-vxD"/>
+                                <include reference="kG6-uK-kIy"/>
                             </mask>
                         </variation>
                         <connections>
