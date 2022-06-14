@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import MetronomeKit_iOS
+import MetromomeKit
 import os
 
 class MainViewController: UIViewController {

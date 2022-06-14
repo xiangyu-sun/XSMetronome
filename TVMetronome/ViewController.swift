@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import MetronomeKit_TVOS
+import MetronomeKit
 import os
 
 

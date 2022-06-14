@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-import MetronomeKit_WatchOS
+import MetromomeKit
 import AVFoundation
 import os
 

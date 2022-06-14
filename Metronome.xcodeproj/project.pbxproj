@@ -3,45 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		991C88E721500417005537D4 /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
-		991C88E821500418005537D4 /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
-		991C88EA21500A98005537D4 /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
-		991C88EB21500A98005537D4 /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
+		994EB85E2858ED4B0050C018 /* MetromomeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 994EB85D2858ED4B0050C018 /* MetromomeKit */; };
+		994EB8642858EEC50050C018 /* MetromomeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 994EB8632858EEC50050C018 /* MetromomeKit */; };
 		9952DDC22154DE4900F3C184 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9952DDC12154DE4900F3C184 /* MainViewController.swift */; };
-		997638B12145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
-		997638B22145728D00952DA7 /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
-		997638B32145807100952DA7 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
 		99787B78215E90A600F9D14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B77215E90A600F9D14A /* AppDelegate.swift */; };
 		99787B7A215E90A600F9D14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B79215E90A600F9D14A /* ViewController.swift */; };
 		99787B7D215E90A600F9D14A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99787B7B215E90A600F9D14A /* Main.storyboard */; };
 		99787B7F215E90A800F9D14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99787B7E215E90A800F9D14A /* Assets.xcassets */; };
 		99787B8A215E90A800F9D14A /* TVMetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B89215E90A800F9D14A /* TVMetronomeTests.swift */; };
 		99787B95215E90A900F9D14A /* TVMetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787B94215E90A900F9D14A /* TVMetronomeUITests.swift */; };
-		99787BAE215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; };
-		99787BB5215E90D500F9D14A /* MetronomeKit_TVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */; };
-		99787BB7215E90D500F9D14A /* MetronomeKit_TVOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99787BBA215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; };
-		99787BBB215E90D500F9D14A /* MetronomeKit_TVOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		99787BC3215E911900F9D14A /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
-		99787BC4215E911900F9D14A /* MetronomeFacePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E521500410005537D4 /* MetronomeFacePainter.swift */; };
-		99787BC5215E911900F9D14A /* FacePaintConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C88E921500A98005537D4 /* FacePaintConfiguration.swift */; };
-		99787BC6215E911900F9D14A /* TWGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997638B02145728D00952DA7 /* TWGenerator.swift */; };
-		99787BC8215E99F000F9D14A /* FocusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99787BC7215E99F000F9D14A /* FocusableView.swift */; };
 		99FBD2242143BA26006F9C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2232143BA26006F9C20 /* AppDelegate.swift */; };
 		99FBD22F2143BA26006F9C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD22D2143BA26006F9C20 /* Main.storyboard */; };
 		99FBD2312143BA28006F9C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2302143BA28006F9C20 /* Assets.xcassets */; };
 		99FBD2342143BA28006F9C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2322143BA28006F9C20 /* LaunchScreen.storyboard */; };
 		99FBD23F2143BA28006F9C20 /* MetronomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD23E2143BA28006F9C20 /* MetronomeTests.swift */; };
 		99FBD24A2143BA28006F9C20 /* MetronomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2492143BA28006F9C20 /* MetronomeUITests.swift */; };
-		99FBD28C2143BD84006F9C20 /* MetronomeKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */; };
-		99FBD2932143BD84006F9C20 /* MetronomeKit_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2922143BD84006F9C20 /* MetronomeKit_iOSTests.swift */; };
-		99FBD2952143BD84006F9C20 /* MetronomeKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 99FBD2852143BD83006F9C20 /* MetronomeKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99FBD2982143BD84006F9C20 /* MetronomeKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */; };
-		99FBD2992143BD84006F9C20 /* MetronomeKit_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		99FBD2AD2143C380006F9C20 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2AB2143C380006F9C20 /* Interface.storyboard */; };
 		99FBD2AF2143C381006F9C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2AE2143C381006F9C20 /* Assets.xcassets */; };
 		99FBD2B62143C381006F9C20 /* MetronomeWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -49,10 +29,6 @@
 		99FBD2BD2143C381006F9C20 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2BC2143C381006F9C20 /* ExtensionDelegate.swift */; };
 		99FBD2C12143C382006F9C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FBD2C02143C382006F9C20 /* Assets.xcassets */; };
 		99FBD2C52143C382006F9C20 /* MetronomeWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */; };
-		99FBD2F02143C5B3006F9C20 /* MetronomeKit_WatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 99FBD2EE2143C5B3006F9C20 /* MetronomeKit_WatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99FBD2F32143C5B3006F9C20 /* MetronomeKit_WatchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */; };
-		99FBD2F42143C5B3006F9C20 /* MetronomeKit_WatchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		99FBD2FE2143CA33006F9C20 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FBD2FD2143CA33006F9C20 /* Metronome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,27 +46,6 @@
 			remoteGlobalIDString = 99787B74215E90A600F9D14A;
 			remoteInfo = TVMetronome;
 		};
-		99787BAF215E90D500F9D14A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99787BA4215E90D500F9D14A;
-			remoteInfo = MetronomeKit_TVOS;
-		};
-		99787BB1215E90D500F9D14A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99787B74215E90A600F9D14A;
-			remoteInfo = TVMetronome;
-		};
-		99787BB8215E90D500F9D14A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99787BA4215E90D500F9D14A;
-			remoteInfo = MetronomeKit_TVOS;
-		};
 		99FBD23B2143BA28006F9C20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
@@ -104,27 +59,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 99FBD21F2143BA26006F9C20;
 			remoteInfo = Metronome;
-		};
-		99FBD28D2143BD84006F9C20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99FBD2822143BD83006F9C20;
-			remoteInfo = MetronomeKit_iOS;
-		};
-		99FBD28F2143BD84006F9C20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99FBD21F2143BA26006F9C20;
-			remoteInfo = Metronome;
-		};
-		99FBD2962143BD84006F9C20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99FBD2822143BD83006F9C20;
-			remoteInfo = MetronomeKit_iOS;
 		};
 		99FBD2B72143C381006F9C20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -140,13 +74,6 @@
 			remoteGlobalIDString = 99FBD2A82143C380006F9C20;
 			remoteInfo = MetronomeWatchOS;
 		};
-		99FBD2F12143C5B3006F9C20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 99FBD2182143BA26006F9C20 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 99FBD2EB2143C5B3006F9C20;
-			remoteInfo = MetronomeKit_WatchOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -156,7 +83,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				99787BBB215E90D500F9D14A /* MetronomeKit_TVOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,7 +93,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				99FBD2992143BD84006F9C20 /* MetronomeKit_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,24 +119,11 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99FBD2DF2143C50E006F9C20 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				99FBD2F42143C5B3006F9C20 /* MetronomeKit_WatchOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		991C88E521500410005537D4 /* MetronomeFacePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeFacePainter.swift; sourceTree = "<group>"; };
-		991C88E921500A98005537D4 /* FacePaintConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacePaintConfiguration.swift; sourceTree = "<group>"; };
+		994EB85B2858ED160050C018 /* MetromomeKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MetromomeKit; path = ../../Desktop/MetromomeKit; sourceTree = "<group>"; };
 		9952DDC12154DE4900F3C184 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		997638B02145728D00952DA7 /* TWGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TWGenerator.swift; sourceTree = "<group>"; };
 		99787B75215E90A600F9D14A /* TVMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99787B77215E90A600F9D14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99787B79215E90A600F9D14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -224,13 +136,6 @@
 		99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99787B94215E90A900F9D14A /* TVMetronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMetronomeUITests.swift; sourceTree = "<group>"; };
 		99787B96215E90A900F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetronomeKit_TVOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetronomeKit_TVOS.h; sourceTree = "<group>"; };
-		99787BA8215E90D500F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeKit_TVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeKit_TVOSTests.swift; sourceTree = "<group>"; };
-		99787BB6215E90D500F9D14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99787BC7215E99F000F9D14A /* FocusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusableView.swift; sourceTree = "<group>"; };
 		99FBD2202143BA26006F9C20 /* Metronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2232143BA26006F9C20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99FBD22E2143BA26006F9C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,12 +148,6 @@
 		99FBD2452143BA28006F9C20 /* MetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2492143BA28006F9C20 /* MetronomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeUITests.swift; sourceTree = "<group>"; };
 		99FBD24B2143BA28006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetronomeKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FBD2852143BD83006F9C20 /* MetronomeKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetronomeKit_iOS.h; sourceTree = "<group>"; };
-		99FBD2862143BD83006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FBD28B2143BD83006F9C20 /* MetronomeKit_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeKit_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FBD2922143BD84006F9C20 /* MetronomeKit_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeKit_iOSTests.swift; sourceTree = "<group>"; };
-		99FBD2942143BD84006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetronomeWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FBD2AC2143C380006F9C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		99FBD2AE2143C381006F9C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,10 +157,6 @@
 		99FBD2BC2143C381006F9C20 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		99FBD2C02143C382006F9C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99FBD2C22143C382006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetronomeKit_WatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99FBD2EE2143C5B3006F9C20 /* MetronomeKit_WatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetronomeKit_WatchOS.h; sourceTree = "<group>"; };
-		99FBD2EF2143C5B3006F9C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FBD2FD2143CA33006F9C20 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,7 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99787BBA215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,26 +181,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99787BA2215E90D500F9D14A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99787BAA215E90D500F9D14A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99787BAE215E90D500F9D14A /* MetronomeKit_TVOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99FBD21D2143BA26006F9C20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FBD2982143BD84006F9C20 /* MetronomeKit_iOS.framework in Frameworks */,
+				994EB85E2858ED4B0050C018 /* MetromomeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,39 +203,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99FBD27F2143BD83006F9C20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2882143BD83006F9C20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99FBD28C2143BD84006F9C20 /* MetronomeKit_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99FBD2B22143C381006F9C20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FBD2F32143C5B3006F9C20 /* MetronomeKit_WatchOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2E82143C5B3006F9C20 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				994EB8642858EEC50050C018 /* MetromomeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		994EB85C2858ED4B0050C018 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99787B76215E90A600F9D14A /* TVMetronome */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,43 +251,20 @@
 			path = TVMetronomeUITests;
 			sourceTree = "<group>";
 		};
-		99787BA6215E90D500F9D14A /* MetronomeKit_TVOS */ = {
-			isa = PBXGroup;
-			children = (
-				99787BA7215E90D500F9D14A /* MetronomeKit_TVOS.h */,
-				99787BC7215E99F000F9D14A /* FocusableView.swift */,
-				99787BA8215E90D500F9D14A /* Info.plist */,
-			);
-			path = MetronomeKit_TVOS;
-			sourceTree = "<group>";
-		};
-		99787BB3215E90D500F9D14A /* MetronomeKit_TVOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				99787BB4215E90D500F9D14A /* MetronomeKit_TVOSTests.swift */,
-				99787BB6215E90D500F9D14A /* Info.plist */,
-			);
-			path = MetronomeKit_TVOSTests;
-			sourceTree = "<group>";
-		};
 		99FBD2172143BA26006F9C20 = {
 			isa = PBXGroup;
 			children = (
-				99FBD27A2143BC98006F9C20 /* MetronomeShared */,
+				994EB85B2858ED160050C018 /* MetromomeKit */,
 				99FBD2222143BA26006F9C20 /* Metronome */,
 				99FBD23D2143BA28006F9C20 /* MetronomeTests */,
 				99FBD2482143BA28006F9C20 /* MetronomeUITests */,
-				99FBD2842143BD83006F9C20 /* MetronomeKit_iOS */,
-				99FBD2912143BD84006F9C20 /* MetronomeKit_iOSTests */,
 				99FBD2AA2143C380006F9C20 /* MetronomeWatchOS */,
 				99FBD2B92143C381006F9C20 /* MetronomeWatchOS Extension */,
-				99FBD2ED2143C5B3006F9C20 /* MetronomeKit_WatchOS */,
 				99787B76215E90A600F9D14A /* TVMetronome */,
 				99787B88215E90A800F9D14A /* TVMetronomeTests */,
 				99787B93215E90A900F9D14A /* TVMetronomeUITests */,
-				99787BA6215E90D500F9D14A /* MetronomeKit_TVOS */,
-				99787BB3215E90D500F9D14A /* MetronomeKit_TVOSTests */,
 				99FBD2212143BA26006F9C20 /* Products */,
+				994EB85C2858ED4B0050C018 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -433,16 +274,11 @@
 				99FBD2202143BA26006F9C20 /* Metronome.app */,
 				99FBD23A2143BA28006F9C20 /* MetronomeTests.xctest */,
 				99FBD2452143BA28006F9C20 /* MetronomeUITests.xctest */,
-				99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */,
-				99FBD28B2143BD83006F9C20 /* MetronomeKit_iOSTests.xctest */,
 				99FBD2A92143C380006F9C20 /* MetronomeWatchOS.app */,
 				99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */,
-				99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */,
 				99787B75215E90A600F9D14A /* TVMetronome.app */,
 				99787B85215E90A800F9D14A /* TVMetronomeTests.xctest */,
 				99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */,
-				99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */,
-				99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -478,35 +314,6 @@
 			path = MetronomeUITests;
 			sourceTree = "<group>";
 		};
-		99FBD27A2143BC98006F9C20 /* MetronomeShared */ = {
-			isa = PBXGroup;
-			children = (
-				99FBD2FD2143CA33006F9C20 /* Metronome.swift */,
-				991C88E521500410005537D4 /* MetronomeFacePainter.swift */,
-				991C88E921500A98005537D4 /* FacePaintConfiguration.swift */,
-				997638B02145728D00952DA7 /* TWGenerator.swift */,
-			);
-			path = MetronomeShared;
-			sourceTree = "<group>";
-		};
-		99FBD2842143BD83006F9C20 /* MetronomeKit_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				99FBD2852143BD83006F9C20 /* MetronomeKit_iOS.h */,
-				99FBD2862143BD83006F9C20 /* Info.plist */,
-			);
-			path = MetronomeKit_iOS;
-			sourceTree = "<group>";
-		};
-		99FBD2912143BD84006F9C20 /* MetronomeKit_iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				99FBD2922143BD84006F9C20 /* MetronomeKit_iOSTests.swift */,
-				99FBD2942143BD84006F9C20 /* Info.plist */,
-			);
-			path = MetronomeKit_iOSTests;
-			sourceTree = "<group>";
-		};
 		99FBD2AA2143C380006F9C20 /* MetronomeWatchOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,43 +335,7 @@
 			path = "MetronomeWatchOS Extension";
 			sourceTree = "<group>";
 		};
-		99FBD2ED2143C5B3006F9C20 /* MetronomeKit_WatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				99FBD2EE2143C5B3006F9C20 /* MetronomeKit_WatchOS.h */,
-				99FBD2EF2143C5B3006F9C20 /* Info.plist */,
-			);
-			path = MetronomeKit_WatchOS;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		99787BA0215E90D500F9D14A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99787BB7215E90D500F9D14A /* MetronomeKit_TVOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2802143BD83006F9C20 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99FBD2952143BD84006F9C20 /* MetronomeKit_iOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2E92143C5B3006F9C20 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99FBD2F02143C5B3006F9C20 /* MetronomeKit_WatchOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		99787B74215E90A600F9D14A /* TVMetronome */ = {
@@ -579,7 +350,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				99787BB9215E90D500F9D14A /* PBXTargetDependency */,
 			);
 			name = TVMetronome;
 			productName = TVMetronome;
@@ -622,43 +392,6 @@
 			productReference = 99787B90215E90A800F9D14A /* TVMetronomeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99787BBC215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOS" */;
-			buildPhases = (
-				99787BA0215E90D500F9D14A /* Headers */,
-				99787BA1215E90D500F9D14A /* Sources */,
-				99787BA2215E90D500F9D14A /* Frameworks */,
-				99787BA3215E90D500F9D14A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MetronomeKit_TVOS;
-			productName = MetronomeKit_TVOS;
-			productReference = 99787BA5215E90D500F9D14A /* MetronomeKit_TVOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		99787BAC215E90D500F9D14A /* MetronomeKit_TVOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99787BC0215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOSTests" */;
-			buildPhases = (
-				99787BA9215E90D500F9D14A /* Sources */,
-				99787BAA215E90D500F9D14A /* Frameworks */,
-				99787BAB215E90D500F9D14A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				99787BB0215E90D500F9D14A /* PBXTargetDependency */,
-				99787BB2215E90D500F9D14A /* PBXTargetDependency */,
-			);
-			name = MetronomeKit_TVOSTests;
-			productName = MetronomeKit_TVOSTests;
-			productReference = 99787BAD215E90D500F9D14A /* MetronomeKit_TVOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		99FBD21F2143BA26006F9C20 /* Metronome */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99FBD24E2143BA28006F9C20 /* Build configuration list for PBXNativeTarget "Metronome" */;
@@ -672,10 +405,13 @@
 			buildRules = (
 			);
 			dependencies = (
-				99FBD2972143BD84006F9C20 /* PBXTargetDependency */,
+				994EB8682858EED70050C018 /* PBXTargetDependency */,
 				99FBD2C42143C382006F9C20 /* PBXTargetDependency */,
 			);
 			name = Metronome;
+			packageProductDependencies = (
+				994EB85D2858ED4B0050C018 /* MetromomeKit */,
+			);
 			productName = Metronome;
 			productReference = 99FBD2202143BA26006F9C20 /* Metronome.app */;
 			productType = "com.apple.product-type.application";
@@ -716,43 +452,6 @@
 			productReference = 99FBD2452143BA28006F9C20 /* MetronomeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		99FBD2822143BD83006F9C20 /* MetronomeKit_iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99FBD29A2143BD84006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_iOS" */;
-			buildPhases = (
-				99FBD27E2143BD83006F9C20 /* Sources */,
-				99FBD27F2143BD83006F9C20 /* Frameworks */,
-				99FBD2802143BD83006F9C20 /* Headers */,
-				99FBD2812143BD83006F9C20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MetronomeKit_iOS;
-			productName = MetronomeKit_iOS;
-			productReference = 99FBD2832143BD83006F9C20 /* MetronomeKit_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		99FBD28A2143BD83006F9C20 /* MetronomeKit_iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99FBD29D2143BD84006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_iOSTests" */;
-			buildPhases = (
-				99FBD2872143BD83006F9C20 /* Sources */,
-				99FBD2882143BD83006F9C20 /* Frameworks */,
-				99FBD2892143BD83006F9C20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				99FBD28E2143BD84006F9C20 /* PBXTargetDependency */,
-				99FBD2902143BD84006F9C20 /* PBXTargetDependency */,
-			);
-			name = MetronomeKit_iOSTests;
-			productName = MetronomeKit_iOSTests;
-			productReference = 99FBD28B2143BD83006F9C20 /* MetronomeKit_iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		99FBD2A82143C380006F9C20 /* MetronomeWatchOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99FBD2CA2143C382006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeWatchOS" */;
@@ -777,35 +476,19 @@
 				99FBD2B12143C381006F9C20 /* Sources */,
 				99FBD2B22143C381006F9C20 /* Frameworks */,
 				99FBD2B32143C381006F9C20 /* Resources */,
-				99FBD2DF2143C50E006F9C20 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				99FBD2F22143C5B3006F9C20 /* PBXTargetDependency */,
+				994EB8662858EECF0050C018 /* PBXTargetDependency */,
 			);
 			name = "MetronomeWatchOS Extension";
+			packageProductDependencies = (
+				994EB8632858EEC50050C018 /* MetromomeKit */,
+			);
 			productName = "MetronomeWatchOS Extension";
 			productReference = 99FBD2B52143C381006F9C20 /* MetronomeWatchOS Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		99FBD2EB2143C5B3006F9C20 /* MetronomeKit_WatchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 99FBD2F52143C5B3006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_WatchOS" */;
-			buildPhases = (
-				99FBD2E72143C5B3006F9C20 /* Sources */,
-				99FBD2E82143C5B3006F9C20 /* Frameworks */,
-				99FBD2E92143C5B3006F9C20 /* Headers */,
-				99FBD2EA2143C5B3006F9C20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MetronomeKit_WatchOS;
-			productName = MetronomeKit_WatchOS;
-			productReference = 99FBD2EC2143C5B3006F9C20 /* MetronomeKit_WatchOS.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -814,7 +497,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "xiangyu sun";
 				TargetAttributes = {
 					99787B74215E90A600F9D14A = {
@@ -825,13 +508,6 @@
 						TestTargetID = 99787B74215E90A600F9D14A;
 					};
 					99787B8F215E90A800F9D14A = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 99787B74215E90A600F9D14A;
-					};
-					99787BA4215E90D500F9D14A = {
-						CreatedOnToolsVersion = 10.0;
-					};
-					99787BAC215E90D500F9D14A = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 99787B74215E90A600F9D14A;
 					};
@@ -849,23 +525,10 @@
 						LastSwiftMigration = 1000;
 						TestTargetID = 99FBD21F2143BA26006F9C20;
 					};
-					99FBD2822143BD83006F9C20 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
-					};
-					99FBD28A2143BD83006F9C20 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
-						TestTargetID = 99FBD21F2143BA26006F9C20;
-					};
 					99FBD2A82143C380006F9C20 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					99FBD2B42143C381006F9C20 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
-					};
-					99FBD2EB2143C5B3006F9C20 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
 					};
@@ -887,16 +550,11 @@
 				99FBD21F2143BA26006F9C20 /* Metronome */,
 				99FBD2392143BA28006F9C20 /* MetronomeTests */,
 				99FBD2442143BA28006F9C20 /* MetronomeUITests */,
-				99FBD2822143BD83006F9C20 /* MetronomeKit_iOS */,
-				99FBD28A2143BD83006F9C20 /* MetronomeKit_iOSTests */,
 				99FBD2A82143C380006F9C20 /* MetronomeWatchOS */,
 				99FBD2B42143C381006F9C20 /* MetronomeWatchOS Extension */,
-				99FBD2EB2143C5B3006F9C20 /* MetronomeKit_WatchOS */,
 				99787B74215E90A600F9D14A /* TVMetronome */,
 				99787B84215E90A800F9D14A /* TVMetronomeTests */,
 				99787B8F215E90A800F9D14A /* TVMetronomeUITests */,
-				99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */,
-				99787BAC215E90D500F9D14A /* MetronomeKit_TVOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -919,20 +577,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		99787B8E215E90A800F9D14A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99787BA3215E90D500F9D14A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99787BAB215E90D500F9D14A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -963,20 +607,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99FBD2812143BD83006F9C20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2892143BD83006F9C20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99FBD2A72143C380006F9C20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -991,13 +621,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FBD2C12143C382006F9C20 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2EA2143C5B3006F9C20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,26 +652,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99787BA1215E90D500F9D14A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99787BC5215E911900F9D14A /* FacePaintConfiguration.swift in Sources */,
-				99787BC3215E911900F9D14A /* Metronome.swift in Sources */,
-				99787BC6215E911900F9D14A /* TWGenerator.swift in Sources */,
-				99787BC8215E99F000F9D14A /* FocusableView.swift in Sources */,
-				99787BC4215E911900F9D14A /* MetronomeFacePainter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99787BA9215E90D500F9D14A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99787BB5215E90D500F9D14A /* MetronomeKit_TVOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99FBD21C2143BA26006F9C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1074,25 +677,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99FBD27E2143BD83006F9C20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				997638B32145807100952DA7 /* Metronome.swift in Sources */,
-				997638B12145728D00952DA7 /* TWGenerator.swift in Sources */,
-				991C88EA21500A98005537D4 /* FacePaintConfiguration.swift in Sources */,
-				991C88E721500417005537D4 /* MetronomeFacePainter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99FBD2872143BD83006F9C20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				99FBD2932143BD84006F9C20 /* MetronomeKit_iOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		99FBD2B12143C381006F9C20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1102,20 +686,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		99FBD2E72143C5B3006F9C20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				997638B22145728D00952DA7 /* TWGenerator.swift in Sources */,
-				99FBD2FE2143CA33006F9C20 /* Metronome.swift in Sources */,
-				991C88EB21500A98005537D4 /* FacePaintConfiguration.swift in Sources */,
-				991C88E821500418005537D4 /* MetronomeFacePainter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		994EB8662858EECF0050C018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 994EB8652858EECF0050C018 /* MetromomeKit */;
+		};
+		994EB8682858EED70050C018 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 994EB8672858EED70050C018 /* MetromomeKit */;
+		};
 		99787B87215E90A800F9D14A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 99787B74215E90A600F9D14A /* TVMetronome */;
@@ -1125,21 +706,6 @@
 			isa = PBXTargetDependency;
 			target = 99787B74215E90A600F9D14A /* TVMetronome */;
 			targetProxy = 99787B91215E90A900F9D14A /* PBXContainerItemProxy */;
-		};
-		99787BB0215E90D500F9D14A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */;
-			targetProxy = 99787BAF215E90D500F9D14A /* PBXContainerItemProxy */;
-		};
-		99787BB2215E90D500F9D14A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99787B74215E90A600F9D14A /* TVMetronome */;
-			targetProxy = 99787BB1215E90D500F9D14A /* PBXContainerItemProxy */;
-		};
-		99787BB9215E90D500F9D14A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99787BA4215E90D500F9D14A /* MetronomeKit_TVOS */;
-			targetProxy = 99787BB8215E90D500F9D14A /* PBXContainerItemProxy */;
 		};
 		99FBD23C2143BA28006F9C20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1151,21 +717,6 @@
 			target = 99FBD21F2143BA26006F9C20 /* Metronome */;
 			targetProxy = 99FBD2462143BA28006F9C20 /* PBXContainerItemProxy */;
 		};
-		99FBD28E2143BD84006F9C20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99FBD2822143BD83006F9C20 /* MetronomeKit_iOS */;
-			targetProxy = 99FBD28D2143BD84006F9C20 /* PBXContainerItemProxy */;
-		};
-		99FBD2902143BD84006F9C20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99FBD21F2143BA26006F9C20 /* Metronome */;
-			targetProxy = 99FBD28F2143BD84006F9C20 /* PBXContainerItemProxy */;
-		};
-		99FBD2972143BD84006F9C20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99FBD2822143BD83006F9C20 /* MetronomeKit_iOS */;
-			targetProxy = 99FBD2962143BD84006F9C20 /* PBXContainerItemProxy */;
-		};
 		99FBD2B82143C381006F9C20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 99FBD2B42143C381006F9C20 /* MetronomeWatchOS Extension */;
@@ -1175,11 +726,6 @@
 			isa = PBXTargetDependency;
 			target = 99FBD2A82143C380006F9C20 /* MetronomeWatchOS */;
 			targetProxy = 99FBD2C32143C382006F9C20 /* PBXContainerItemProxy */;
-		};
-		99FBD2F22143C5B3006F9C20 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 99FBD2EB2143C5B3006F9C20 /* MetronomeKit_WatchOS */;
-			targetProxy = 99FBD2F12143C5B3006F9C20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1239,7 +785,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -1262,7 +808,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -1362,116 +908,6 @@
 			};
 			name = Release;
 		};
-		99787BBD215E90D500F9D14A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_TVOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		99787BBE215E90D500F9D14A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_TVOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		99787BC1215E90D500F9D14A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = MetronomeKit_TVOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Debug;
-		};
-		99787BC2215E90D500F9D14A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = MetronomeKit_TVOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-TVOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMetronome.app/TVMetronome";
-				TVOS_DEPLOYMENT_TARGET = 12.0;
-			};
-			name = Release;
-		};
 		99FBD24C2143BA28006F9C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1498,6 +934,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1523,12 +960,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -1558,6 +996,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1577,19 +1016,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
 		99FBD24F2143BA28006F9C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1611,7 +1050,6 @@
 		99FBD2502143BA28006F9C20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1711,102 +1149,6 @@
 			};
 			name = Release;
 		};
-		99FBD29B2143BD84006F9C20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		99FBD29C2143BD84006F9C20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		99FBD29E2143BD84006F9C20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = MetronomeKit_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metronome.app/Metronome";
-			};
-			name = Debug;
-		};
-		99FBD29F2143BD84006F9C20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = MetronomeKit_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Metronome.app/Metronome";
-			};
-			name = Release;
-		};
 		99FBD2C72143C382006F9C20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1889,68 +1231,6 @@
 			};
 			name = Release;
 		};
-		99FBD2F62143C5B3006F9C20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_WatchOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Debug;
-		};
-		99FBD2F72143C5B3006F9C20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MetronomeKit_WatchOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.MetronomeKit-WatchOS";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1977,24 +1257,6 @@
 			buildConfigurations = (
 				99787B9E215E90A900F9D14A /* Debug */,
 				99787B9F215E90A900F9D14A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		99787BBC215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99787BBD215E90D500F9D14A /* Debug */,
-				99787BBE215E90D500F9D14A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		99787BC0215E90D500F9D14A /* Build configuration list for PBXNativeTarget "MetronomeKit_TVOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99787BC1215E90D500F9D14A /* Debug */,
-				99787BC2215E90D500F9D14A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2035,24 +1297,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99FBD29A2143BD84006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99FBD29B2143BD84006F9C20 /* Debug */,
-				99FBD29C2143BD84006F9C20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		99FBD29D2143BD84006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99FBD29E2143BD84006F9C20 /* Debug */,
-				99FBD29F2143BD84006F9C20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		99FBD2C62143C382006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeWatchOS Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2071,16 +1315,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99FBD2F52143C5B3006F9C20 /* Build configuration list for PBXNativeTarget "MetronomeKit_WatchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				99FBD2F62143C5B3006F9C20 /* Debug */,
-				99FBD2F72143C5B3006F9C20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		994EB85D2858ED4B0050C018 /* MetromomeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetromomeKit;
+		};
+		994EB8632858EEC50050C018 /* MetromomeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetromomeKit;
+		};
+		994EB8652858EECF0050C018 /* MetromomeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetromomeKit;
+		};
+		994EB8672858EED70050C018 /* MetromomeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MetromomeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99FBD2182143BA26006F9C20 /* Project object */;
 }
